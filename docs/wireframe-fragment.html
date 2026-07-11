@@ -1,0 +1,134 @@
+<div id="gre-verbal-wireframe-v1">
+  <style>
+    #gre-verbal-wireframe-v1 { color: var(--foreground); }
+    #gre-verbal-wireframe-v1 .gvl-shell { display: grid; gap: 16px; }
+    #gre-verbal-wireframe-v1 .gvl-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+    #gre-verbal-wireframe-v1 .gvl-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    #gre-verbal-wireframe-v1 .gvl-panel { display: none; }
+    #gre-verbal-wireframe-v1 .gvl-panel.is-active { display: grid; gap: 14px; }
+    #gre-verbal-wireframe-v1 .gvl-queue { display: grid; gap: 8px; }
+    #gre-verbal-wireframe-v1 .gvl-queue-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    #gre-verbal-wireframe-v1 .gvl-queue-row:last-child { border-bottom: 0; }
+    #gre-verbal-wireframe-v1 .gvl-progress { height: 8px; background: var(--muted); overflow: hidden; border-radius: 999px; }
+    #gre-verbal-wireframe-v1 .gvl-progress > span { display: block; height: 100%; background: var(--viz-series-1); border-radius: inherit; }
+    #gre-verbal-wireframe-v1 .gvl-relationship { display: grid; grid-template-columns: minmax(110px, 1fr) auto minmax(110px, 1fr); align-items: center; gap: 10px; }
+    #gre-verbal-wireframe-v1 .gvl-word { text-align: center; padding: 12px; background: color-mix(in srgb, var(--viz-series-1) 12%, transparent); border-radius: 10px; }
+    #gre-verbal-wireframe-v1 .gvl-word-secondary { background: color-mix(in srgb, var(--viz-series-2) 12%, transparent); }
+    #gre-verbal-wireframe-v1 .gvl-mistakes { display: grid; gap: 10px; }
+    #gre-verbal-wireframe-v1 .gvl-mistake { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    #gre-verbal-wireframe-v1 .gvl-bars { display: grid; gap: 12px; }
+    #gre-verbal-wireframe-v1 .gvl-bar-row { display: grid; grid-template-columns: minmax(110px, .7fr) minmax(140px, 2fr) auto; gap: 10px; align-items: center; }
+    #gre-verbal-wireframe-v1 .gvl-detail { min-height: 24px; color: var(--muted-foreground); }
+    @media (max-width: 560px) {
+      #gre-verbal-wireframe-v1 .gvl-summary { grid-template-columns: 1fr; }
+      #gre-verbal-wireframe-v1 .gvl-relationship { grid-template-columns: 1fr; }
+      #gre-verbal-wireframe-v1 .gvl-relationship > span { text-align: center; }
+      #gre-verbal-wireframe-v1 .gvl-bar-row { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+
+  <div class="gvl-shell">
+    <div class="gvl-nav" aria-label="App sections">
+      <button class="btn btn-primary" type="button" data-panel="today" aria-pressed="true">今日学习</button>
+      <button class="btn" type="button" data-panel="word" aria-pressed="false">词义网络</button>
+      <button class="btn" type="button" data-panel="mistakes" aria-pressed="false">错题回炉</button>
+      <button class="btn" type="button" data-panel="progress" aria-pressed="false">学习进度</button>
+    </div>
+
+    <section class="gvl-panel is-active" data-content="today">
+      <div class="gvl-summary">
+        <div class="card viz-stat"><div class="text-muted">今日任务</div><div class="viz-stat-value">42</div><div class="text-small">新词 12 · 复习 30</div></div>
+        <div class="card viz-stat"><div class="text-muted">预计时间</div><div class="viz-stat-value">38 min</div><div class="text-small">按你的每日预算生成</div></div>
+        <div class="card viz-stat"><div class="text-muted">优先弱项</div><div class="viz-stat-value">语境同义</div><div class="text-small">近 7 天错 6 次</div></div>
+      </div>
+      <div class="gvl-progress" aria-label="今日完成进度 36%"><span style="width:36%"></span></div>
+      <div class="gvl-queue" aria-label="Today's learning queue">
+        <div class="gvl-queue-row"><div><strong>主动回忆</strong><div class="text-small text-muted">12 个到期词义 · 约 8 分钟</div></div><button class="btn" type="button" data-detail="先显示单词，作答后再展示释义；记录信心和用时。">开始</button></div>
+        <div class="gvl-queue-row"><div><strong>近义词辨析</strong><div class="text-small text-muted">laconic / terse / succinct / pithy</div></div><button class="btn" type="button" data-detail="本组因两次六选二混淆被提高优先级。">练习</button></div>
+        <div class="gvl-queue-row"><div><strong>错题回炉</strong><div class="text-small text-muted">4 道 Text Completion · 约 12 分钟</div></div><button class="btn" type="button" data-detail="先重做原题，再练相关词义，最后做迁移题。">查看</button></div>
+        <div class="gvl-queue-row"><div><strong>快速识别</strong><div class="text-small text-muted">8 个答对但用时过长的词义</div></div><button class="btn" type="button" data-detail="正确但缓慢不会立即毕业，系统会安排限时识别。">开始</button></div>
+      </div>
+      <div class="gvl-detail text-small" aria-live="polite">选择一个任务可查看系统为何安排它。</div>
+    </section>
+
+    <section class="gvl-panel" data-content="word">
+      <div class="viz-row"><span class="viz-badge">qualified · adjective</span><span class="text-muted">Sense 2 of 2</span></div>
+      <div class="card">
+        <h3>有限制的；有所保留的</h3>
+        <p>GRE 语境中常用于评价、赞同或支持并非完全成立。</p>
+        <div class="gvl-relationship" aria-label="Sense-specific relationship">
+          <div class="gvl-word"><strong>qualified</strong><div class="text-small">有所保留的</div></div>
+          <span class="text-muted">语境同义</span>
+          <div class="gvl-word gvl-word-secondary"><strong>tempered</strong><div class="text-small">被缓和的</div></div>
+        </div>
+      </div>
+      <div class="viz-grid">
+        <div class="card viz-stat"><div class="text-muted">释义回忆</div><div class="viz-stat-value">82%</div></div>
+        <div class="card viz-stat"><div class="text-muted">关系辨析</div><div class="viz-stat-value">54%</div></div>
+        <div class="card viz-stat"><div class="text-muted">真题表现</div><div class="viz-stat-value">2 / 4</div></div>
+      </div>
+      <button class="btn" type="button" data-detail="候选关系会保留来源和待确认状态，不会因 AI 建议自动成为事实。">添加或确认关系</button>
+      <div class="gvl-detail text-small" aria-live="polite">关系绑定到具体词义，而不是只连接两个拼写。</div>
+    </section>
+
+    <section class="gvl-panel" data-content="mistakes">
+      <div class="card">
+        <h3>最近的错误模式</h3>
+        <div class="gvl-mistakes">
+          <div class="gvl-mistake"><div><strong>同义关系判断错</strong><div class="text-small text-muted">laconic ↔ pithy · 2 次</div></div><span class="viz-badge">今日回炉</span></div>
+          <div class="gvl-mistake"><div><strong>漏看让步信号</strong><div class="text-small text-muted">although / notwithstanding · 3 次</div></div><span class="viz-badge">明日</span></div>
+          <div class="gvl-mistake"><div><strong>正确但低信心</strong><div class="text-small text-muted">equivocal · 11.8 秒</div></div><span class="viz-badge">快速识别</span></div>
+        </div>
+      </div>
+      <div class="viz-controls">
+        <button class="btn btn-primary" type="button" data-detail="记录题型、所选答案、正确答案、错因、相关词义和个人备注。">记录新错题</button>
+        <button class="btn" type="button" data-detail="回炉顺序：原题重做 → 词义强化 → 结构迁移。">开始回炉</button>
+      </div>
+      <div class="gvl-detail text-small" aria-live="polite">每条错题都会生成至少一个未来强化任务。</div>
+    </section>
+
+    <section class="gvl-panel" data-content="progress">
+      <div class="card">
+        <h3>四维掌握度</h3>
+        <div class="gvl-bars">
+          <div class="gvl-bar-row"><span>释义回忆</span><div class="gvl-progress"><span style="width:76%"></span></div><strong>76%</strong></div>
+          <div class="gvl-bar-row"><span>同反义关系</span><div class="gvl-progress"><span style="width:58%"></span></div><strong>58%</strong></div>
+          <div class="gvl-bar-row"><span>语境理解</span><div class="gvl-progress"><span style="width:64%"></span></div><strong>64%</strong></div>
+          <div class="gvl-bar-row"><span>真题表现</span><div class="gvl-progress"><span style="width:61%"></span></div><strong>61%</strong></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>本周建议</h3>
+        <p>减少新词 15%，增加语境同义与让步逻辑训练。原因：释义回忆增长稳定，但关系辨析连续两周落后。</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById('gre-verbal-wireframe-v1');
+      const tabs = [...root.querySelectorAll('[data-panel]')];
+      const panels = [...root.querySelectorAll('[data-content]')];
+      const detailLines = [...root.querySelectorAll('.gvl-detail')];
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((item) => {
+            const active = item === tab;
+            item.setAttribute('aria-pressed', String(active));
+            item.classList.toggle('btn-primary', active);
+          });
+          panels.forEach((panel) => panel.classList.toggle('is-active', panel.dataset.content === tab.dataset.panel));
+        });
+      });
+
+      root.querySelectorAll('[data-detail]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const activePanel = button.closest('.gvl-panel');
+          const line = activePanel.querySelector('.gvl-detail');
+          if (line) line.textContent = button.dataset.detail;
+        });
+      });
+    })();
+  </script>
+</div>
