@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="GRE Verbal Lab">
+  <rect width="128" height="128" rx="28" fill="#102a43"/>
+  <path d="M28 40c13-3 25 0 36 8 11-8 23-11 36-8v47c-13-2-25 1-36 9-11-8-23-11-36-9Z" fill="#fffdf8"/>
+  <path d="M64 49v45" stroke="#d9d4c9" stroke-width="2"/>
+  <path d="M46 71 64 59l18 12M46 71h36" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="59" r="7" fill="#0f766e" stroke="#fffdf8" stroke-width="3"/>
+  <circle cx="46" cy="71" r="7" fill="#0f766e" stroke="#fffdf8" stroke-width="3"/>
+  <circle cx="82" cy="71" r="7" fill="#0f766e" stroke="#fffdf8" stroke-width="3"/>
+  <path d="M31 29c15-14 43-18 64-4" fill="none" stroke="#f4b860" stroke-width="6" stroke-linecap="round"/>
+  <path d="m91 18 8 8-11 2" fill="none" stroke="#f4b860" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M97 99c-15 14-43 18-64 4" fill="none" stroke="#f4b860" stroke-width="6" stroke-linecap="round"/>
+  <path d="m37 110-8-8 11-2" fill="none" stroke="#f4b860" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

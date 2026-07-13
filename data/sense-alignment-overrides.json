@@ -1,0 +1,24 @@
+{
+  "count": [
+    {
+      "definitionZh": "有重要性",
+      "ili": "i34896",
+      "alignmentState": "verified",
+      "alignmentScore": 1,
+      "alignmentSource": "GRE Verbal Lab editorial review using Wiktionary revision 91070378 and CILI i34896",
+      "examples": [
+        {
+          "text": "Your views don’t count here.",
+          "kind": "dictionary",
+          "sourceLabel": "Wiktionary — count, English verb sense 4",
+          "provenance": "CC BY-SA 4.0; Wiktionary revision 91070378",
+          "reviewState": "editor_reviewed",
+          "rightsState": "open_reuse",
+          "allowedIn": ["public", "private"],
+          "sourceUrl": "https://en.wiktionary.org/w/index.php?title=count&oldid=91070378",
+          "sourceLocator": "English > Etymology 1 > Verb > sense 4"
+        }
+      ]
+    }
+  ]
+}

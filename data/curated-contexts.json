@@ -1,0 +1,272 @@
+{
+  "aberrant": {
+    "definitionZh": "偏离常态的；异常的",
+    "sentence": "Because the anomalous result could not be replicated, the researchers treated it as aberrant rather than as evidence against the prevailing theory."
+  },
+  "assuage": {
+    "definitionZh": "缓和；减轻",
+    "sentence": "The committee released the full dataset to assuage concerns that its conclusions had been based on selective evidence."
+  },
+  "capricious": {
+    "definitionZh": "反复无常的；任性的",
+    "sentence": "The critic's judgments were so capricious that a novel praised in one essay might be dismissed without explanation in the next."
+  },
+  "deleterious": {
+    "definitionZh": "有害的；造成损害的",
+    "sentence": "Although the policy promised short-term efficiency, its deleterious effect on institutional trust became apparent within a year."
+  },
+  "enervate": {
+    "definitionZh": "使衰弱；削弱活力",
+    "sentence": "Rather than invigorating the campaign, the prolonged dispute began to enervate even its most committed supporters."
+  },
+  "ephemeral": {
+    "definitionZh": "短暂的；转瞬即逝的",
+    "sentence": "The movement's popularity proved ephemeral: public enthusiasm vanished as soon as the immediate crisis passed."
+  },
+  "equivocal": {
+    "definitionZh": "模棱两可的；含糊的",
+    "sentence": "Asked whether the evidence supported the claim, the researcher gave an equivocal answer that neither endorsed nor rejected it."
+  },
+  "iconoclast": {
+    "definitionZh": "挑战传统观念的人；反传统者",
+    "sentence": "An iconoclast within the discipline, she questioned assumptions that most of her colleagues treated as self-evident."
+  },
+  "laconic": {
+    "definitionZh": "言辞简洁的；寡言的",
+    "sentence": "The editor's laconic reply—'Revise the evidence'—made clear that stylistic polish would not rescue the weak argument."
+  },
+  "mitigate": {
+    "definitionZh": "缓和；减轻严重程度",
+    "sentence": "The new safeguards may mitigate the risk of error, but they cannot eliminate the uncertainty inherent in the model."
+  },
+  "obdurate": {
+    "definitionZh": "顽固不化的；拒不改变的",
+    "sentence": "Even after the contradictory records were produced, the official remained obdurate and refused to revise his account."
+  },
+  "placate": {
+    "definitionZh": "安抚；使平息",
+    "sentence": "The minor concession was intended to placate the protesters, yet it merely convinced them that further pressure would be effective."
+  },
+  "pragmatic": {
+    "definitionZh": "务实的；重视实际效果的",
+    "sentence": "Her defense of the compromise was pragmatic rather than ideological: it was the only proposal likely to secure immediate relief."
+  },
+  "prolific": {
+    "definitionZh": "多产的；成果丰富的",
+    "sentence": "A prolific essayist, he published frequently without allowing the pressure of deadlines to make his arguments superficial."
+  },
+  "recalcitrant": {
+    "definitionZh": "抗拒管束的；顽固不合作的",
+    "sentence": "The recalcitrant committee ignored repeated requests for disclosure until the court compelled it to release the documents."
+  },
+  "sanguine": {
+    "definitionZh": "乐观的；充满信心的",
+    "sentence": "Despite the project's early failures, its director remained sanguine, arguing that each setback had revealed a correctable flaw."
+  },
+  "scrupulous": {
+    "definitionZh": "一丝不苟的；严谨正直的",
+    "sentence": "Her scrupulous citation of contrary evidence made the study more persuasive, not less, because readers could see its limitations."
+  },
+  "tenuous": {
+    "definitionZh": "薄弱的；牵强的",
+    "sentence": "The theory rests on a tenuous analogy between two institutions that developed under markedly different conditions."
+  },
+  "captious": {
+    "definitionZh": "吹毛求疵的；爱挑剔的",
+    "sentence": "The review was so captious that it catalogued minor stylistic flaws while ignoring the study's substantial contribution.",
+    "synonyms": ["faultfinding", "hypercritical"],
+    "antonyms": ["indulgent", "uncritical"]
+  },
+  "virtuosity": {
+    "definitionZh": "精湛技艺；高超技巧",
+    "sentence": "The pianist's virtuosity was never merely ornamental; every technical flourish clarified the structure of the composition.",
+    "synonyms": ["mastery", "brilliance"],
+    "antonyms": ["ineptitude"]
+  },
+  "apocryphal": {
+    "definitionZh": "真实性可疑的；杜撰的",
+    "sentence": "The oft-repeated story about the scientist's sudden discovery is probably apocryphal, since no contemporary account mentions it.",
+    "synonyms": ["spurious", "dubious"],
+    "antonyms": ["authentic", "verified"]
+  },
+  "erstwhile": {
+    "definitionZh": "从前的；往昔的",
+    "sentence": "The reformer's erstwhile allies became her fiercest critics once the proposal threatened their own privileges.",
+    "synonyms": ["former", "onetime"],
+    "antonyms": ["current"]
+  },
+  "remonstrate": {
+    "definitionZh": "抗议；规劝",
+    "sentence": "Several scholars remonstrated with the editor, arguing that the disputed article should be corrected rather than quietly withdrawn.",
+    "synonyms": ["protest", "object"],
+    "antonyms": ["acquiesce"]
+  },
+  "ramification": {
+    "definitionZh": "后果；衍生影响",
+    "sentence": "One unexpected ramification of the subsidy was that firms delayed innovation in order to remain eligible for assistance.",
+    "synonyms": ["consequence", "repercussion"],
+    "antonyms": []
+  },
+  "dissipate": {
+    "definitionZh": "消散；挥霍",
+    "sentence": "Initial skepticism began to dissipate when three independent laboratories reproduced the result.",
+    "synonyms": ["disperse", "scatter"],
+    "antonyms": ["accumulate", "concentrate"]
+  },
+  "blithe": {
+    "definitionZh": "无忧无虑的；漫不经心的",
+    "sentence": "His blithe assurance that the transition would be painless revealed how little he understood the communities bearing its costs.",
+    "synonyms": ["carefree", "heedless"],
+    "antonyms": ["anxious", "grave"]
+  },
+  "august": {
+    "definitionZh": "威严的；令人敬畏的",
+    "sentence": "Despite the academy's august reputation, its conclusions were not exempt from empirical scrutiny.",
+    "ipa": "ɔːˈɡʌst",
+    "synonyms": ["venerable", "majestic"],
+    "antonyms": ["lowly", "undistinguished"]
+  },
+  "felicitous": {
+    "definitionZh": "恰当的；表达贴切的",
+    "sentence": "Her felicitous analogy made an abstruse economic mechanism intelligible without oversimplifying it.",
+    "synonyms": ["apt", "well-chosen"],
+    "antonyms": ["inappropriate", "infelicitous"]
+  },
+  "relinquish": {
+    "definitionZh": "放弃；交出",
+    "sentence": "The agency would not relinquish its authority merely because the new oversight rules made that authority harder to exercise.",
+    "synonyms": ["surrender", "renounce"],
+    "antonyms": ["retain", "claim"]
+  },
+  "dazzle": {
+    "definitionZh": "使眼花；使惊叹",
+    "sentence": "The presentation was designed to dazzle investors with elaborate graphics, but its underlying projections remained implausible.",
+    "synonyms": ["impress", "overwhelm"],
+    "antonyms": ["disappoint"]
+  },
+  "evince": {
+    "definitionZh": "表明；显示",
+    "sentence": "Although she voiced no objection, her repeated requests for clarification evinced considerable doubt about the proposal.",
+    "synonyms": ["manifest", "exhibit"],
+    "antonyms": ["conceal"]
+  },
+  "prudent": {
+    "definitionZh": "谨慎明智的",
+    "sentence": "Given the fragility of the evidence, postponing the sweeping conclusion was prudent rather than timid.",
+    "synonyms": ["judicious", "circumspect"],
+    "antonyms": ["reckless", "improvident"]
+  },
+  "grapple": {
+    "definitionZh": "努力应对；与之搏斗",
+    "sentence": "Any credible account of the reform must grapple with evidence that appears to contradict its central premise.",
+    "synonyms": ["wrestle", "contend"],
+    "antonyms": ["avoid", "evade"]
+  },
+  "barbarity": {
+    "definitionZh": "野蛮；残酷行为",
+    "sentence": "The historian refused to portray the episode as an isolated barbarity, tracing it instead to a systematic policy of repression.",
+    "synonyms": ["cruelty", "savagery"],
+    "antonyms": ["humanity", "civility"]
+  },
+  "rhetorical": {
+    "definitionZh": "修辞性的；用于说服而非求答的",
+    "sentence": "The senator's question was rhetorical: it was intended to condemn the policy, not to solicit an explanation.",
+    "synonyms": ["oratorical", "stylistic"],
+    "antonyms": ["literal", "plain"]
+  },
+  "coy": {
+    "definitionZh": "故作含蓄的；不愿明确表态的",
+    "sentence": "The report was coy about the program's cost, mentioning substantial expenditure without supplying a figure.",
+    "synonyms": ["evasive", "demure"],
+    "antonyms": ["forthright", "candid"]
+  },
+  "assume": {
+    "definitionZh": "假定；认为",
+    "sentence": "The model does not demonstrate that consumers are fully informed; it merely assumes that they are.",
+    "synonyms": ["suppose", "presume"],
+    "antonyms": ["verify", "establish"]
+  },
+  "connoisseur": {
+    "definitionZh": "鉴赏家；行家",
+    "sentence": "A connoisseur of early photography, she noticed that the supposedly rare print used a process developed decades later.",
+    "synonyms": ["expert", "aficionado"],
+    "antonyms": ["novice"]
+  },
+  "captivate": {
+    "definitionZh": "吸引并牢牢抓住注意力",
+    "definitionEn": "to attract and hold someone's interest",
+    "sentence": "The lecturer captivated an initially skeptical audience by turning an abstract theorem into a sequence of concrete puzzles.",
+    "synonyms": ["enthrall", "fascinate"],
+    "antonyms": ["bore", "repel"]
+  },
+  "erect": {
+    "definitionZh": "直立的；竖直的",
+    "definitionEn": "upright in position or posture",
+    "sentence": "The monument remained erect after the earthquake even though several newer structures had collapsed.",
+    "synonyms": ["upright", "vertical"],
+    "antonyms": ["prostrate", "recumbent"]
+  },
+  "distance": {
+    "definitionZh": "远远超过；把……甩在后面",
+    "definitionEn": "to leave far behind or surpass",
+    "sentence": "By incorporating archival evidence unavailable to earlier scholars, the new study distanced its predecessors in both scope and precision.",
+    "synonyms": ["outstrip", "surpass"],
+    "antonyms": ["trail", "lag"]
+  },
+  "block": {
+    "definitionZh": "阻碍；妨碍",
+    "definitionEn": "to obstruct or prevent progress",
+    "sentence": "A lack of evidence did not merely slow the inquiry; it blocked any reliable comparison between the two periods.",
+    "synonyms": ["obstruct", "impede"],
+    "antonyms": ["facilitate", "advance"]
+  },
+  "dainty": {
+    "definitionZh": "小巧精致的；秀美的",
+    "definitionEn": "delicately small and refined",
+    "sentence": "The instrument's dainty appearance belied its capacity to produce a remarkably powerful sound.",
+    "synonyms": ["delicate", "exquisite"],
+    "antonyms": ["coarse", "clumsy"]
+  },
+  "evocative": {
+    "definitionZh": "能唤起记忆或联想的",
+    "definitionEn": "bringing vivid images, memories, or feelings to mind",
+    "sentence": "The novelist's sparse description was nevertheless evocative, suggesting an entire vanished city through a few carefully chosen details.",
+    "synonyms": ["suggestive", "reminiscent"],
+    "antonyms": ["insipid", "unexpressive"]
+  },
+  "grant": {
+    "definitionZh": "承认；姑且认可",
+    "definitionEn": "to concede or admit that something is true",
+    "sentence": "Even if we grant the author's central assumption, the conclusion still does not follow from the evidence presented.",
+    "synonyms": ["concede", "acknowledge"],
+    "antonyms": ["deny", "dispute"]
+  },
+  "revolt": {
+    "definitionZh": "反叛；反抗",
+    "definitionEn": "to rebel against authority or control",
+    "sentence": "Workers did not revolt merely because wages fell; they rebelled when the new rules also denied them any avenue of appeal.",
+    "synonyms": ["rebel", "uprise"],
+    "antonyms": ["submit", "obey"]
+  },
+  "cow": {
+    "definitionZh": "恐吓；威慑使屈服",
+    "definitionEn": "to intimidate someone into submission",
+    "sentence": "The threat of public criticism did not cow the investigators, who continued to request the missing records.",
+    "synonyms": ["intimidate", "daunt"],
+    "antonyms": ["embolden", "encourage"]
+  },
+  "astronomical": {
+    "definitionZh": "极其巨大的；天文数字般的",
+    "definitionEn": "enormously or inconceivably large",
+    "sentence": "The proposal's astronomical cost would be easier to defend if its promised benefits were supported by more than speculation.",
+    "synonyms": ["enormous", "colossal"],
+    "antonyms": ["negligible", "modest"]
+  },
+  "conscientious": {
+    "definitionZh": "认真负责的；一丝不苟的",
+    "definitionEn": "careful, diligent, and guided by a sense of duty",
+    "sentence": "A conscientious reviewer checks evidence that supports the paper as carefully as evidence that undermines it.",
+    "synonyms": ["diligent", "scrupulous"],
+    "antonyms": ["negligent", "careless"]
+  }
+}

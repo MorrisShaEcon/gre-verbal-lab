@@ -1,0 +1,41 @@
+{
+  "name": "gre-verbal-lab",
+  "private": true,
+  "version": "2.2.0-alpha.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build --mode open",
+    "build:open": "tsc -b && vite build --mode open",
+    "build:personal": "tsc -b && vite build --mode personal",
+    "build:standalone": "tsc -b && vite build --mode personal && node scripts/make-standalone.mjs --mode=personal",
+    "build:standalone:open": "tsc -b && vite build --mode open && node scripts/make-standalone.mjs --mode=open",
+    "catalog:base": "node --experimental-strip-types scripts/build-personal-catalog.mjs --stage=base",
+    "catalog:audio": "node scripts/fetch-commons-audio.mjs",
+    "catalog:merge-confusables": "node scripts/merge-confusable-reviews.mjs",
+    "catalog:build": "node --experimental-strip-types scripts/build-personal-catalog.mjs --stage=full && node scripts/build-open-demo.mjs",
+    "catalog:validate": "node scripts/validate-catalog.mjs",
+    "catalog:alignment-audit": "node scripts/audit-sense-alignment.mjs",
+    "catalog:relation-audit": "node scripts/audit-lexical-relations.mjs",
+    "catalog:audit": "node scripts/validate-catalog.mjs && node scripts/audit-sense-alignment.mjs && node scripts/audit-lexical-relations.mjs && node scripts/audit-study-content.mjs",
+    "quiz:audit": "node scripts/audit-quiz-questions.mjs",
+    "corpus:prepare-review": "node --experimental-strip-types scripts/prepare-private-gre-review.mjs",
+    "corpus:merge-review": "node scripts/merge-private-gre-question-bindings.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "idb": "^8.0.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.10"
+  }
+}

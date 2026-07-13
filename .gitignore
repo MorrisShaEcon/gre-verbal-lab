@@ -6,7 +6,21 @@ dist/
 coverage/
 playwright-report/
 test-results/
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+vite.config.js
+vite.config.d.ts
 *.local
 data/private/
 imports/private/
+data/cache/
+public/data/catalog.personal.json
+*.xlsx
+*.xls
 
+# User-specific corpus tooling and audit notes stay local with the source PDFs.
+docs/*CORPUS_INDEX.md
+scripts/*private*corpus*.py
+scripts/*private*gre*questions*.py
+scripts/test_*private*gre*questions*.py

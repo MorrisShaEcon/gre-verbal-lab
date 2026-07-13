@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "reviewedCatalogVersion": null,
+  "reviewedAt": null,
+  "method": "Private semantic review and exact-sense distractor links are loaded from imports/private/study-sense-reviews.personal.json.",
+  "approvedSenseIds": [],
+  "entries": {}
+}

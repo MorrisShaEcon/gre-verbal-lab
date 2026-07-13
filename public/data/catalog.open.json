@@ -1,0 +1,5218 @@
+{
+  "schemaVersion": 2,
+  "catalogVersion": "2026.07.13-open-demo.7",
+  "generatedAt": "2026-07-13T11:16:10.994Z",
+  "visibility": "public-open-demo",
+  "samplingPolicy": {
+    "focusShare": 0.7,
+    "longTailShare": 0.3,
+    "description": "Open demonstration catalog with sense-aligned dictionary examples."
+  },
+  "provenance": [
+    {
+      "id": "cmudict",
+      "label": "CMU Pronouncing Dictionary",
+      "url": "https://github.com/cmusphinx/cmudict",
+      "license": "CMUdict permissive notice"
+    },
+    {
+      "id": "oewn-2025",
+      "label": "Open English WordNet 2025",
+      "url": "https://en-word.net/",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "omw-cmn-1.4",
+      "label": "Chinese Open Wordnet 1.4",
+      "url": "https://omwn.org/omw1.html",
+      "license": "WordNet license; Francis Bond & Shan Wang 2013, 2014"
+    },
+    {
+      "id": "lingua-libre",
+      "label": "Lingua Libre recordings via Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/Category:Lingua_Libre_pronunciation-eng",
+      "license": "Per-file open license"
+    }
+  ],
+  "words": [
+    {
+      "id": "word-14oisg3",
+      "headword": "condemn",
+      "normalizedHeadword": "condemn",
+      "pronunciations": [
+        {
+          "ipa": "kənˈdɛm",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "kəndˈɛm",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "K",
+            "AH0",
+            "N",
+            "D",
+            "EH1",
+            "M"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-1rwe6r6",
+          "partOfSpeech": "v.",
+          "definitionZh": "谴责",
+          "definitionEn": "demonstrate the guilt of (someone)",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i32499) / Open English WordNet 2025",
+          "openSenseId": "condemn%2:39:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1txyxjh",
+              "text": "Her strange behavior condemned her",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "plead"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-5tihxw"
+          ],
+          "confusableRationales": {
+            "sense-5tihxw": "在司法语境中 plead 是提出辩护，condemn 是认定有罪或强烈谴责。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02153732-v (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02153732-v members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense condemn%2:39:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i32499; exact: 谴责"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 1,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 2459834499,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-tvmcrh",
+      "headword": "divergent",
+      "normalizedHeadword": "divergent",
+      "pronunciations": [
+        {
+          "ipa": "daɪˈvɜːdʒənt",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "dɪˈvɝdʒənt",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "daɪvˈɝdʒənt",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "D",
+            "AY0",
+            "V",
+            "ER1",
+            "JH",
+            "AH0",
+            "N",
+            "T"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-114532937",
+          "fileTitle": "File:LL-Q1860 (eng)-Vininn126-divergent.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/LL-Q1860_%28eng%29-Vininn126-divergent.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vininn126-divergent.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vininn126 Recorder: Vininn126",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1avsju1",
+          "partOfSpeech": "adj.",
+          "definitionZh": "不同的",
+          "definitionEn": "diverging from another or from a standard",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i11331) / Open English WordNet 2025",
+          "openSenseId": "divergent%5:00:00:different:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-fi9d5w",
+              "text": "a divergent opinion",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02074066-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02074066-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense divergent%5:00:00:different:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i11331; exact: 不同+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 2,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1806630173,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-hfda09",
+      "headword": "dogmatic",
+      "normalizedHeadword": "dogmatic",
+      "pronunciations": [
+        {
+          "ipa": "dɒɡˈmatɪk",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "dɑɡmˈætɪk",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "D",
+            "AA0",
+            "G",
+            "M",
+            "AE1",
+            "T",
+            "IH0",
+            "K"
+          ]
+        },
+        {
+          "ipa": "dɔɡmˈætɪk",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "D",
+            "AO0",
+            "G",
+            "M",
+            "AE1",
+            "T",
+            "IH0",
+            "K"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-114532941",
+          "fileTitle": "File:LL-Q1860 (eng)-Vininn126-dogmatic.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/LL-Q1860_%28eng%29-Vininn126-dogmatic.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vininn126-dogmatic.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vininn126 Recorder: Vininn126",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1jn5dv0",
+          "partOfSpeech": "adj.",
+          "definitionZh": "教条的",
+          "definitionEn": "relating to or involving dogma",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i17181) / Open English WordNet 2025",
+          "openSenseId": "dogmatic%3:01:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-17ggqiw",
+              "text": "dogmatic writings",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 03017897-a (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 03017897-a members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense dogmatic%3:01:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i17181; exact: 教条+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 3,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1053738729,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-un2mhg",
+      "headword": "effect",
+      "normalizedHeadword": "effect",
+      "pronunciations": [
+        {
+          "ipa": "ɪˈfɛkt",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "əˈfɛkt",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ɪfˈɛkt",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "IH0",
+            "F",
+            "EH1",
+            "K",
+            "T"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-147212279",
+          "fileTitle": "File:LL-Q1860 (eng)-Grendelkhan-effect.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/LL-Q1860_%28eng%29-Grendelkhan-effect.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-effect.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Grendelkhan Recorder: Grendelkhan",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        },
+        {
+          "id": "commons-79900132",
+          "fileTitle": "File:LL-Q1860 (eng)-Back ache-effect.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/LL-Q1860_%28eng%29-Back_ache-effect.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Back_ache-effect.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Back ache Recorder: Back ache",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1p0jfko",
+          "partOfSpeech": "v.",
+          "definitionZh": "引起",
+          "definitionEn": "act so as to bring into existence",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i34494) / Open English WordNet 2025",
+          "openSenseId": "effect%2:41:15::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-5m292s",
+              "text": "effect a change",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02566682-v (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02566682-v members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense effect%2:41:15:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i34494; exact: 引起"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 4,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1852738900,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-17jswng",
+      "headword": "efficacious",
+      "normalizedHeadword": "efficacious",
+      "pronunciations": [
+        {
+          "ipa": "ɛf.ɪ.ˈkeɪ.ʃəs",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɛfəkˈeɪʃəs",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "EH2",
+            "F",
+            "AH0",
+            "K",
+            "EY1",
+            "SH",
+            "AH0",
+            "S"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-98061171",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-efficacious.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/LL-Q1860_%28eng%29-Vealhurl-efficacious.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-efficacious.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-116b80m",
+          "partOfSpeech": "adj.",
+          "definitionZh": "有效果的",
+          "definitionEn": "producing or capable of producing an intended result or having a striking effect",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i4584) / Open English WordNet 2025",
+          "openSenseId": "efficacious%3:00:02::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-3sfghf",
+              "text": "an efficacious law",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "effective",
+              "effectual"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "utilitarian"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1l56xsk"
+          ],
+          "confusableRationales": {
+            "sense-1l56xsk": "utilitarian 评价实际用途，efficacious 评价是否真正产生预期结果。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 00837737-a (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 00837737-a members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense efficacious%3:00:02:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i4584; exact: 有效果+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 5,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 2633306956,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-9slk1t",
+      "headword": "eminent",
+      "normalizedHeadword": "eminent",
+      "pronunciations": [
+        {
+          "ipa": "ˈɛmɪnənt",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈɛmənənt",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "EH1",
+            "M",
+            "AH0",
+            "N",
+            "AH0",
+            "N",
+            "T"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-14vp2l4",
+          "partOfSpeech": "adj.",
+          "definitionZh": "杰出的",
+          "definitionEn": "standing above others in quality or position",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i12956) / Open English WordNet 2025",
+          "openSenseId": "eminent%5:00:00:superior:01",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-kw45nb",
+              "text": "eminent members of the community",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "high"
+            ],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02347190-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02347190-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense eminent%5:00:00:superior:01 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i12956; exact: 杰出+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 6,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 592230593,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1yodygs",
+      "headword": "estrange",
+      "normalizedHeadword": "estrange",
+      "pronunciations": [
+        {
+          "ipa": "ɪˈstɹeɪndʒ",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ɛstrˈeɪndʒ",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "EH0",
+            "S",
+            "T",
+            "R",
+            "EY1",
+            "N",
+            "JH"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-126137813",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-estrange.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/LL-Q1860_%28eng%29-Vealhurl-estrange.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-estrange.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-ql2umu",
+          "partOfSpeech": "v.",
+          "definitionZh": "使疏远",
+          "definitionEn": "remove from customary environment or associations",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i34674) / Open English WordNet 2025",
+          "openSenseId": "estrange%2:41:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-yta31v",
+              "text": "years of boarding school estranged the child from her home",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02603243-v (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02603243-v members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense estrange%2:41:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i34674; exact: 使疏远"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 7,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 4273594300,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-19vnbf8",
+      "headword": "frugal",
+      "normalizedHeadword": "frugal",
+      "pronunciations": [
+        {
+          "ipa": "ˈfɹuːɡəl",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "frˈuɡəl",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "F",
+            "R",
+            "UW1",
+            "G",
+            "AH0",
+            "L"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-20k93a",
+          "partOfSpeech": "adj.",
+          "definitionZh": "节俭的",
+          "definitionEn": "avoiding waste",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i13402) / Open English WordNet 2025",
+          "openSenseId": "frugal%5:00:00:thrifty:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1dfwh4b",
+              "text": "a frugal farmer",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-1d5wvfc",
+              "text": "a frugal lunch",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "economical",
+              "scotch",
+              "sparing",
+              "stinting"
+            ],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02430138-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02430138-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense frugal%5:00:00:thrifty:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i13402; exact: 节俭+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 8,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 2774133908,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-htwwnt",
+      "headword": "galactic",
+      "normalizedHeadword": "galactic",
+      "pronunciations": [
+        {
+          "ipa": "ɡəˈlæktɪk",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ɡəlˈæktɪk",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "G",
+            "AH0",
+            "L",
+            "AE1",
+            "K",
+            "T",
+            "IH0",
+            "K"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-1sixkow",
+          "partOfSpeech": "adj.",
+          "definitionZh": "星系的",
+          "definitionEn": "of or relating to a galaxy (especially our galaxy the Milky Way)",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i16179) / Open English WordNet 2025",
+          "openSenseId": "galactic%3:01:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-xqv17j",
+              "text": "the galactic plane",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "imperial",
+              "immense"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-ogdum7",
+            "sense-9j3il"
+          ],
+          "confusableRationales": {
+            "sense-ogdum7": "galactic empire 等语境易混；imperial 关联帝国，galactic 关联星系。",
+            "sense-9j3il": "星系通常巨大，但 immense 描述尺度，galactic 是关系形容词。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02859983-a (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02859983-a members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense galactic%3:01:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i16179; exact: 星系+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "long-tail",
+        "rank": 9,
+        "priorityScore": 30,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1078169177,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-3tays9",
+      "headword": "genial",
+      "normalizedHeadword": "genial",
+      "pronunciations": [
+        {
+          "ipa": "dʒɪˈnʌɪəl",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "dʒˈinjəl",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "JH",
+            "IY1",
+            "N",
+            "Y",
+            "AH0",
+            "L"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-1yvkapu",
+          "partOfSpeech": "adj.",
+          "definitionZh": "友好的",
+          "definitionEn": "diffusing warmth and friendliness",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i5898) / Open English WordNet 2025",
+          "openSenseId": "genial%5:00:00:friendly:01",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1ewaabl",
+              "text": "a genial host",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "affable",
+              "amiable",
+              "cordial"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "heartfelt"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1a1lc8c"
+          ],
+          "confusableRationales": {
+            "sense-1a1lc8c": "都可形容亲切表达；heartfelt 强调发自内心，不等于友善性格。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 01078866-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 01078866-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense genial%5:00:00:friendly:01 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i5898; exact: 友好+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 10,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 230619033,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1aicueu",
+      "headword": "heartfelt",
+      "normalizedHeadword": "heartfelt",
+      "pronunciations": [
+        {
+          "ipa": "ˈhɑːt.fɛlt",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈhɑːɹt.fɛlt",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "hˈɑrtfˌɛlt",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "HH",
+            "AA1",
+            "R",
+            "T",
+            "F",
+            "EH2",
+            "L",
+            "T"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-1a1lc8c",
+          "partOfSpeech": "adj.",
+          "definitionZh": "真诚的",
+          "definitionEn": "sincerely earnest",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i11985) / Open English WordNet 2025",
+          "openSenseId": "heartfelt%5:00:00:sincere:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1e208tx",
+              "text": "heartfelt condolences",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "dear",
+              "devout",
+              "earnest"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "genial"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1yvkapu"
+          ],
+          "confusableRationales": {
+            "sense-1yvkapu": "友好表达可能很真诚，但 genial 描述待人温暖，不保证发自内心。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02187588-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02187588-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense heartfelt%5:00:00:sincere:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i11985; exact: 真诚+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 11,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 2812276470,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1rn0m90",
+      "headword": "honorific",
+      "normalizedHeadword": "honorific",
+      "pronunciations": [
+        {
+          "ipa": "ˌɒnəˈɹɪfɪk",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɑːnəˈɹɪfɪk",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɑnɚˈɪfɪk",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "AA2",
+            "N",
+            "ER0",
+            "IH1",
+            "F",
+            "IH0",
+            "K"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-144931391",
+          "fileTitle": "File:LL-Q1860 (eng)-Wodencafe-honorific.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/LL-Q1860_%28eng%29-Wodencafe-honorific.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-honorific.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Wodencafe Recorder: Wodencafe",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1juvr8f",
+          "partOfSpeech": "adj.",
+          "definitionZh": "尊敬的",
+          "definitionEn": "conferring or showing honor or respect",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i10923) / Open English WordNet 2025",
+          "openSenseId": "honorific%5:00:00:respectful:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-zj7g10",
+              "text": "honorific social status commonly attaches to membership in a recognized profession",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "eminent",
+              "genial"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-14vp2l4",
+            "sense-1yvkapu"
+          ],
+          "confusableRationales": {
+            "sense-14vp2l4": "尊称常用于杰出人物；eminent 描述地位突出，honorific 表示授予尊敬。",
+            "sense-1yvkapu": "都是正面人际属性；genial 是友善，honorific 是表示敬意。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02001504-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02001504-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense honorific%5:00:00:respectful:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i10923; exact: 尊敬+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "long-tail",
+        "rank": 12,
+        "priorityScore": 30,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 3848029092,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-2wqqmh",
+      "headword": "immense",
+      "normalizedHeadword": "immense",
+      "pronunciations": [
+        {
+          "ipa": "ɪˈmɛns",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɪmˈɛns",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "IH2",
+            "M",
+            "EH1",
+            "N",
+            "S"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-9j3il",
+          "partOfSpeech": "adj.",
+          "definitionZh": "巨大的",
+          "definitionEn": "unusually great in size or amount or degree or especially extent or scope",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i7552) / Open English WordNet 2025",
+          "openSenseId": "immense%5:00:01:large:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-122lmny",
+              "text": "the Los Angeles aqueduct winds like an immense snake along the base of the mountains",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-12cl8cx",
+              "text": "immense numbers of birds",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "huge",
+              "vast",
+              "brobdingnagian"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "momentous",
+              "galactic"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-12x74o9",
+            "sense-1sixkow"
+          ],
+          "confusableRationales": {
+            "sense-12x74o9": "great 可指规模或重要性；momentous 是意义重大，不是体量巨大。",
+            "sense-1sixkow": "星系通常尺度巨大，但 galactic 是所属关系，不直接表示大小。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 01390253-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 01390253-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense immense%5:00:01:large:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i7552; exact: 巨大+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 13,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 175927625,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1ose0e4",
+      "headword": "imperial",
+      "normalizedHeadword": "imperial",
+      "pronunciations": [
+        {
+          "ipa": "ɪmˈpɪ.ɹi.əl",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɪmpˈɪriəl",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "IH2",
+            "M",
+            "P",
+            "IH1",
+            "R",
+            "IY0",
+            "AH0",
+            "L"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-2707533",
+          "fileTitle": "File:En-us-imperial.ogg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/En-us-imperial.ogg",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:En-us-imperial.ogg",
+          "sourceLabel": "Wikimedia Commons",
+          "creator": "TreeMama",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "dialect": "US",
+          "human": true,
+          "mimeType": "application/ogg"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-ogdum7",
+          "partOfSpeech": "adj.",
+          "definitionZh": "帝国的",
+          "definitionEn": "relating to or associated with an empire",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i15470) / Open English WordNet 2025",
+          "openSenseId": "imperial%3:01:01::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-zj79e7",
+              "text": "imperial colony",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-z97np8",
+              "text": "the imperial gallon was standardized legally throughout the British Empire",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "galactic"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1sixkow"
+          ],
+          "confusableRationales": {
+            "sense-1sixkow": "在 galactic empire 等搭配中易相邻；一个关联星系，一个关联帝国。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02757808-a (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02757808-a members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense imperial%3:01:01:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i15470; exact: 帝国+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 14,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 3675653500,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1k4g2sb",
+      "headword": "incendiary",
+      "normalizedHeadword": "incendiary",
+      "pronunciations": [
+        {
+          "ipa": "ɪnˈsɛn.dɪ.əɹ.i",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ɪnˈsɛn.di.ɛɹ.i",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɪnsˈɛndiɛri",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "IH2",
+            "N",
+            "S",
+            "EH1",
+            "N",
+            "D",
+            "IY0",
+            "EH0",
+            "R",
+            "IY0"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-lptuz0",
+          "partOfSpeech": "adj.",
+          "definitionZh": "纵火的",
+          "definitionEn": "involving deliberate burning of property",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i15476) / Open English WordNet 2025",
+          "openSenseId": "incendiary%3:01:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-ggzzlw",
+              "text": "an incendiary fire",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02758869-a (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02758869-a members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense incendiary%3:01:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i15476; exact: 纵火+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 15,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 3393574427,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-vb1xh8",
+      "headword": "integrity",
+      "normalizedHeadword": "integrity",
+      "pronunciations": [
+        {
+          "ipa": "ɪnˈtɛɡɹəti",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɪntˈɛɡrəti",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "IH2",
+            "N",
+            "T",
+            "EH1",
+            "G",
+            "R",
+            "AH0",
+            "T",
+            "IY0"
+          ]
+        },
+        {
+          "ipa": "ɪntˈɛɡrɪti",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "IH0",
+            "N",
+            "T",
+            "EH1",
+            "G",
+            "R",
+            "IH0",
+            "T",
+            "IY0"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-pst75z",
+          "partOfSpeech": "n.",
+          "definitionZh": "正直",
+          "definitionEn": "moral soundness",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i62575) / Open English WordNet 2025",
+          "openSenseId": "integrity%1:07:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1blwwfb",
+              "text": "he expects to find in us the common honesty and integrity of men of business",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-1bbxaqc",
+              "text": "they admired his scrupulous professional integrity",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "justification"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-pd88xg"
+          ],
+          "confusableRationales": {
+            "sense-pd88xg": "都可进入道德判断；justification 是为行为辩护的理由，不是品格。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 04876782-n (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 04876782-n members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense integrity%1:07:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i62575; exact: 正直"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 16,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1893017276,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-c8gsra",
+      "headword": "involved",
+      "normalizedHeadword": "involved",
+      "pronunciations": [
+        {
+          "ipa": "ɪnˈvɑlvd",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ɪnˈvɒlvd",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌɪnvˈɑlvd",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "IH2",
+            "N",
+            "V",
+            "AA1",
+            "L",
+            "V",
+            "D"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-1cg1ayq",
+          "partOfSpeech": "adj.",
+          "definitionZh": "复杂的",
+          "definitionEn": "highly complex or intricate and occasionally devious",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i11969) / Open English WordNet 2025",
+          "openSenseId": "involved%5:00:00:complex:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1kllq76",
+              "text": "the plot was too involved",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "byzantine",
+              "convoluted",
+              "knotty",
+              "tangled",
+              "tortuous",
+              "labyrinthine"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "laborious"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-3lhtw6"
+          ],
+          "confusableRationales": {
+            "sense-3lhtw6": "复杂任务往往也费力，但 laborious 评价完成它所需的努力，involved 评价结构本身的复杂程度。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02184401-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02184401-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense involved%5:00:00:complex:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i11969; exact: 复杂+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 17,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 739814806,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-95oitx",
+      "headword": "itinerant",
+      "normalizedHeadword": "itinerant",
+      "pronunciations": [
+        {
+          "ipa": "aɪˈtɪnɚənt",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "aɪtˈɪnɚənt",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "AY0",
+            "T",
+            "IH1",
+            "N",
+            "ER0",
+            "AH0",
+            "N",
+            "T"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-164640630",
+          "fileTitle": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-itinerant.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/LL-Q1860_%28eng%29-Naomi_Persephone_Amethyst_%28NaomiAmethyst%29-itinerant.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Naomi_Persephone_Amethyst_(NaomiAmethyst)-itinerant.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Naomi Persephone Amethyst Recorder: NaomiAmethyst",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        },
+        {
+          "id": "commons-90007927",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-itinerant.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/LL-Q1860_%28eng%29-Vealhurl-itinerant.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-itinerant.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-102pgdd",
+          "partOfSpeech": "adj.",
+          "definitionZh": "巡游的",
+          "definitionEn": "traveling from place to place to work",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i11654) / Open English WordNet 2025",
+          "openSenseId": "itinerant%5:00:00:unsettled:01",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-x14azp",
+              "text": "itinerant labor",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-wr4paq",
+              "text": "an itinerant judge",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02135946-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02135946-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense itinerant%5:00:00:unsettled:01 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i11654; exact: 巡游+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 18,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 553737813,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-ua9069",
+      "headword": "justification",
+      "normalizedHeadword": "justification",
+      "pronunciations": [
+        {
+          "ipa": "ˌdʒʌstɪfɪˈkeɪʃən",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "dʒˌʌstəfəkˈeɪʃən",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "JH",
+            "AH2",
+            "S",
+            "T",
+            "AH0",
+            "F",
+            "AH0",
+            "K",
+            "EY1",
+            "SH",
+            "AH0",
+            "N"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-143853549",
+          "fileTitle": "File:LL-Q1860 (eng)-Wodencafe-justification.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/LL-Q1860_%28eng%29-Wodencafe-justification.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-justification.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Wodencafe Recorder: Wodencafe",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        },
+        {
+          "id": "commons-113808011",
+          "fileTitle": "File:LL-Q1860 (eng)-Ajshul-justification.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/LL-Q1860_%28eng%29-Ajshul-justification.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Ajshul-justification.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Ajshul Recorder: Ajshul",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-pd88xg",
+          "partOfSpeech": "n.",
+          "definitionZh": "理由",
+          "definitionEn": "something (such as a fact or circumstance) that shows an action to be reasonable or necessary",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i67482) / Open English WordNet 2025",
+          "openSenseId": "justification%1:09:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1bn38d6",
+              "text": "he considered misrule a justification for revolution",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 05831414-n (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 05831414-n members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense justification%1:09:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i67482; exact: 理由"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 19,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1831201569,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-124u868",
+      "headword": "knotty",
+      "normalizedHeadword": "knotty",
+      "pronunciations": [
+        {
+          "ipa": "ˈnɒti",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "nˈɑti",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "N",
+            "AA1",
+            "T",
+            "IY0"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-vqj3hg",
+          "partOfSpeech": "adj.",
+          "definitionZh": "复杂的",
+          "definitionEn": "highly complex or intricate and occasionally devious",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i11969) / Open English WordNet 2025",
+          "openSenseId": "knotty%5:00:00:complex:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-6i10sg",
+              "text": "a knotty problem",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "byzantine",
+              "convoluted",
+              "involved",
+              "tangled",
+              "tortuous",
+              "labyrinthine"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "laborious",
+              "superficial"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-3lhtw6",
+            "sense-1k08foz"
+          ],
+          "confusableRationales": {
+            "sense-3lhtw6": "laborious 描述执行耗力，knotty 描述问题本身盘根错节。",
+            "sense-1k08foz": "复杂深度上的对比：superficial 只在表层，knotty 难以理清。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02184401-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02184401-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense knotty%5:00:00:complex:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i11969; exact: 复杂+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 20,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 2305843424,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-5vxck1",
+      "headword": "laborious",
+      "normalizedHeadword": "laborious",
+      "pronunciations": [
+        {
+          "ipa": "ləˈbɔːɹiəs",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ləbˈɔriəs",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "L",
+            "AH0",
+            "B",
+            "AO1",
+            "R",
+            "IY0",
+            "AH0",
+            "S"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-89844657",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-laborious.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/LL-Q1860_%28eng%29-Vealhurl-laborious.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-laborious.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-3lhtw6",
+          "partOfSpeech": "adj.",
+          "definitionZh": "费力的",
+          "definitionEn": "characterized by effort to the point of exhaustion; especially physical effort",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i4593) / Open English WordNet 2025",
+          "openSenseId": "laborious%5:00:00:effortful:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1gpqm76",
+              "text": "spent many laborious hours on the project",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "arduous",
+              "backbreaking",
+              "grueling",
+              "gruelling",
+              "hard",
+              "heavy",
+              "operose",
+              "punishing"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "efficacious"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-116b80m"
+          ],
+          "confusableRationales": {
+            "sense-116b80m": "一个评价投入成本，一个评价结果有效性；二者可同时成立但不可互换。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 00840083-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 00840083-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense laborious%5:00:00:effortful:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i4593; exact: 费力+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 21,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 355954897,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1p8yra",
+      "headword": "lucid",
+      "normalizedHeadword": "lucid",
+      "pronunciations": [
+        {
+          "ipa": "ˈl(j)uːsɪd",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "lˈusəd",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "L",
+            "UW1",
+            "S",
+            "AH0",
+            "D"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-104902193",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-lucid.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/LL-Q1860_%28eng%29-Vealhurl-lucid.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-lucid.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1iphbgw",
+          "partOfSpeech": "adj.",
+          "definitionZh": "清晰的",
+          "definitionEn": "transmitting light; able to be seen through with clarity",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i2437) / Open English WordNet 2025",
+          "openSenseId": "lucid%5:00:00:clear:02",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1d8zujr",
+              "text": "lucid air",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "crystalline",
+              "crystal clear",
+              "limpid",
+              "pellucid",
+              "transparent"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "sparkling"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1h9tg05"
+          ],
+          "confusableRationales": {
+            "sense-1h9tg05": "都描述视觉效果；sparkling 强调亮点闪耀，lucid 强调透明清晰。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 00433489-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 00433489-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense lucid%5:00:00:clear:02 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i2437; exact: 清晰+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 22,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 102874870,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-a2qr29",
+      "headword": "modicum",
+      "normalizedHeadword": "modicum",
+      "pronunciations": [
+        {
+          "ipa": "ˈmɒdɪkəm",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈmɑdɪkəm",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "mˈɑdɪkəm",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "M",
+            "AA1",
+            "D",
+            "IH0",
+            "K",
+            "AH0",
+            "M"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-92837829",
+          "fileTitle": "File:En-us-modicum.mp3",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/En-us-modicum.mp3",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:En-us-modicum.mp3",
+          "sourceLabel": "Wikimedia Commons",
+          "creator": "Koavf",
+          "license": "CC0",
+          "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "dialect": "US",
+          "human": true,
+          "mimeType": "audio/mpeg"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-gc2qj9",
+          "partOfSpeech": "n.",
+          "definitionZh": "少量",
+          "definitionEn": "a small or moderate or token amount",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i109194) / Open English WordNet 2025",
+          "openSenseId": "modicum%1:23:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1igxmyg",
+              "text": "England still expects a modicum of eccentricity in its artists",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "pinnacle"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-mxvbtk"
+          ],
+          "confusableRationales": {
+            "sense-mxvbtk": "都落在程度或数量尺度上；pinnacle 表示最高点，modicum 表示最低限度的一小份。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 13783941-n (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 13783941-n members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense modicum%1:23:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i109194; exact: 少量"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 23,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 609269121,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-ves39a",
+      "headword": "momentous",
+      "normalizedHeadword": "momentous",
+      "pronunciations": [
+        {
+          "ipa": "məʊˈmɛn.təs",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "moʊˈmɛn.təs",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "moʊmˈɛntəs",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "M",
+            "OW0",
+            "M",
+            "EH1",
+            "N",
+            "T",
+            "AH0",
+            "S"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-12x74o9",
+          "partOfSpeech": "adj.",
+          "definitionZh": "重要的",
+          "definitionEn": "of very great significance",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i11880) / Open English WordNet 2025",
+          "openSenseId": "momentous%5:00:00:significant:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-2hxf6f",
+              "text": "a momentous event",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-27xthg",
+              "text": "deciding to drop the atom bomb was a very momentous decision",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "eminent",
+              "immense"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-14vp2l4",
+            "sense-9j3il"
+          ],
+          "confusableRationales": {
+            "sense-14vp2l4": "都带高度评价；eminent 修饰人或地位突出，momentous 修饰事件意义重大。",
+            "sense-9j3il": "great 的两个维度：immense 是规模巨大，momentous 是意义重大。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02169397-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02169397-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense momentous%5:00:00:significant:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i11880; exact: 重要+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 24,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1899276670,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1l18xds",
+      "headword": "morbid",
+      "normalizedHeadword": "morbid",
+      "pronunciations": [
+        {
+          "ipa": "ˈmɔː.bɪd",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈmɔɹ.bɪd",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "mˈɔrbəd",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "M",
+            "AO1",
+            "R",
+            "B",
+            "AH0",
+            "D"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-14tgim6",
+          "partOfSpeech": "adj.",
+          "definitionZh": "不健康的",
+          "definitionEn": "suggesting an unhealthy mental state",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i14201) / Open English WordNet 2025",
+          "openSenseId": "morbid%5:00:00:unwholesome:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1r0f9a",
+              "text": "morbid interest in death",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-2100y9",
+              "text": "morbid curiosity",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02570592-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02570592-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense morbid%5:00:00:unwholesome:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i14201; exact: 不健康+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 25,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 3448668160,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-xlj9vp",
+      "headword": "pinnacle",
+      "normalizedHeadword": "pinnacle",
+      "pronunciations": [
+        {
+          "ipa": "ˈpɪnəkəl",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "pˈɪnəkəl",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "P",
+            "IH1",
+            "N",
+            "AH0",
+            "K",
+            "AH0",
+            "L"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-88987440",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-pinnacle.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/LL-Q1860_%28eng%29-Vealhurl-pinnacle.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-pinnacle.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-mxvbtk",
+          "partOfSpeech": "n.",
+          "definitionZh": "顶点",
+          "definitionEn": "the highest level or degree attainable; the highest stage of development",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i110202) / Open English WordNet 2025",
+          "openSenseId": "pinnacle%1:26:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-fa7ptz",
+              "text": "… catapulted Einstein to the pinnacle of fame",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "acme",
+              "height",
+              "elevation",
+              "peak",
+              "summit",
+              "superlative",
+              "meridian",
+              "tiptop"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "realm"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-vohgzf"
+          ],
+          "confusableRationales": {
+            "sense-vohgzf": "realm 是领域，pinnacle 是领域内可达的顶峰。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 13963489-n (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 13963489-n members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense pinnacle%1:26:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i110202; exact: 顶点"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 26,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 2031555013,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-v4k98x",
+      "headword": "plead",
+      "normalizedHeadword": "plead",
+      "pronunciations": [
+        {
+          "ipa": "ˈpliːd",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "plˈid",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "P",
+            "L",
+            "IY1",
+            "D"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-5tihxw",
+          "partOfSpeech": "v.",
+          "definitionZh": "辩护",
+          "definitionEn": "enter a plea, as in courts of law",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i25498) / Open English WordNet 2025",
+          "openSenseId": "plead%2:32:01::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-mlfxzk",
+              "text": "She pleaded not guilty",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "condemn"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1rwe6r6"
+          ],
+          "confusableRationales": {
+            "sense-1rwe6r6": "同见司法语境；condemn 是判明有罪或谴责。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 00762621-v (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 00762621-v members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense plead%2:32:01:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i25498; exact: 辩护"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "long-tail",
+        "rank": 27,
+        "priorityScore": 30,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1882115025,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-vo1z0w",
+      "headword": "realm",
+      "normalizedHeadword": "realm",
+      "pronunciations": [
+        {
+          "ipa": "ɹɛlm",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "rˈɛlm",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "R",
+            "EH1",
+            "L",
+            "M"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-vohgzf",
+          "partOfSpeech": "n.",
+          "definitionZh": "领域",
+          "definitionEn": "a domain in which something is dominant",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i113279) / Open English WordNet 2025",
+          "openSenseId": "realm%1:26:01::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-jlyb2b",
+              "text": "the rise of the realm of cotton in the south",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "kingdom",
+              "land"
+            ],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 14538407-n (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 14538407-n members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense realm%1:26:01:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i113279; exact: 领域"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 28,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1914854288,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-ap733s",
+      "headword": "refine",
+      "normalizedHeadword": "refine",
+      "pronunciations": [
+        {
+          "ipa": "ɹɪˈfaɪn",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "rəfˈaɪn",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "R",
+            "AH0",
+            "F",
+            "AY1",
+            "N"
+          ]
+        },
+        {
+          "ipa": "rɪfˈaɪn",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "R",
+            "IH0",
+            "F",
+            "AY1",
+            "N"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-95142974",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-refine.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/LL-Q1860_%28eng%29-Vealhurl-refine.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-refine.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        },
+        {
+          "id": "commons-163987167",
+          "fileTitle": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-refine.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/LL-Q1860_%28eng%29-Naomi_Persephone_Amethyst_%28NaomiAmethyst%29-refine.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Naomi_Persephone_Amethyst_(NaomiAmethyst)-refine.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Naomi Persephone Amethyst Recorder: NaomiAmethyst",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1wf60d5",
+          "partOfSpeech": "v.",
+          "definitionZh": "提纯",
+          "definitionEn": "attenuate or reduce in vigor, strength, or intensity by polishing or purifying",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i23739) / Open English WordNet 2025",
+          "openSenseId": "refine%2:30:03::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-lxvpd6",
+              "text": "many valuable nutrients are refined out of the foods in our modern diet",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 00402812-v (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 00402812-v members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense refine%2:30:03:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i23739; exact: 提纯"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 29,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 646982776,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1ytdf8q",
+      "headword": "resume",
+      "normalizedHeadword": "resume",
+      "pronunciations": [
+        {
+          "ipa": "ɹɪˈzjuːm",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈɹɛz.(j)ʊˌmeɪ",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈɹɛz.ə.meɪ",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-12uqz3v",
+          "partOfSpeech": "v.",
+          "definitionZh": "恢复",
+          "definitionEn": "assume anew",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i33666) / Open English WordNet 2025",
+          "openSenseId": "resume%2:41:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1i8f2fb",
+              "text": "resume a title",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-1hyfgqc",
+              "text": "resume an office",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "effect"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1p0jfko"
+          ],
+          "confusableRationales": {
+            "sense-1p0jfko": "effect 是使某事产生，resume 是让已有状态继续。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02387093-v (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02387093-v members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense resume%2:41:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i33666; exact: 恢复"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "long-tail",
+        "rank": 30,
+        "priorityScore": 30,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 4281967466,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-tebf72",
+      "headword": "sparkling",
+      "normalizedHeadword": "sparkling",
+      "pronunciations": [
+        {
+          "ipa": "ˈspɑɹkl̩ɪŋ",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈspɑːkl̩ɪŋ",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "spˈɑrklɪŋ",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "S",
+            "P",
+            "AA1",
+            "R",
+            "K",
+            "L",
+            "IH0",
+            "NG"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-89032950",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-sparkling.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/LL-Q1860_%28eng%29-Vealhurl-sparkling.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-sparkling.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1h9tg05",
+          "partOfSpeech": "adj.",
+          "definitionZh": "闪闪发光的",
+          "definitionEn": "shining with brilliant points of light like stars",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i12730) / Open English WordNet 2025",
+          "openSenseId": "sparkling%5:00:00:starry:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1oui2a5",
+              "text": "sparkling snow",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-1okigl6",
+              "text": "sparkling eyes",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "lucid",
+              "tawdry"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1iphbgw",
+            "sense-1q5y0l4"
+          ],
+          "confusableRationales": {
+            "sense-1iphbgw": "lucid 是透光清澈，sparkling 是亮点闪耀。",
+            "sense-1q5y0l4": "tawdry 是廉价炫目，sparkling 本身无低俗评价。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02307429-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02307429-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense sparkling%5:00:00:starry:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i12730; exact: 闪闪发光+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "long-tail",
+        "rank": 31,
+        "priorityScore": 30,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1777566638,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-1mgjrom",
+      "headword": "steadfast",
+      "normalizedHeadword": "steadfast",
+      "pronunciations": [
+        {
+          "ipa": "ˈstɛdfæst",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "stˈɛdfˌæst",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "S",
+            "T",
+            "EH1",
+            "D",
+            "F",
+            "AE2",
+            "S",
+            "T"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-2453727",
+          "fileTitle": "File:En-us-steadfast.ogg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/En-us-steadfast.ogg",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:En-us-steadfast.ogg",
+          "sourceLabel": "Wikimedia Commons",
+          "creator": "Neskaya",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "dialect": "US",
+          "human": true,
+          "mimeType": "application/ogg"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1uajf17",
+          "partOfSpeech": "adj.",
+          "definitionZh": "坚定不移的",
+          "definitionEn": "marked by firm determination or resolution; not shakable",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i10902) / Open English WordNet 2025",
+          "openSenseId": "steadfast%5:00:00:resolute:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-17e75kp",
+              "text": "steadfast resolve",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "firm",
+              "steady",
+              "stiff",
+              "unbendable",
+              "unfaltering",
+              "unshakable",
+              "unwavering"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "dogmatic"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1jn5dv0"
+          ],
+          "confusableRationales": {
+            "sense-1jn5dv0": "dogmatic 是固守教条，steadfast 是决心不动摇。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 01997735-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 01997735-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense steadfast%5:00:00:resolute:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i10902; exact: 坚定不移+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 32,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 3534834406,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-i3gjnc",
+      "headword": "suffice",
+      "normalizedHeadword": "suffice",
+      "pronunciations": [
+        {
+          "ipa": "səˈfaɪs",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "səfˈaɪs",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "S",
+            "AH0",
+            "F",
+            "AY1",
+            "S"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-bscf2m",
+          "partOfSpeech": "v.",
+          "definitionZh": "足够",
+          "definitionEn": "be sufficient; be adequate, either in quality or quantity",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i35014) / Open English WordNet 2025",
+          "openSenseId": "suffice%2:42:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-12i4537",
+              "text": "A ‘B’ grade doesn't suffice to get me into medical school",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "do",
+              "answer",
+              "serve"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "effect"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1p0jfko"
+          ],
+          "confusableRationales": {
+            "sense-1p0jfko": "effect 是使结果产生，suffice 只是已经达到够用标准。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02675578-v (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02675578-v members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense suffice%2:42:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i35014; exact: 足够"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "long-tail",
+        "rank": 33,
+        "priorityScore": 30,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1094201976,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-qrcpm4",
+      "headword": "superficial",
+      "normalizedHeadword": "superficial",
+      "pronunciations": [
+        {
+          "ipa": "ˌsuː.pəˈfɪʃ.əl",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˌsu.pɚˈfɪʃ.əl",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "sˌupɚfˈɪʃəl",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "S",
+            "UW2",
+            "P",
+            "ER0",
+            "F",
+            "IH1",
+            "SH",
+            "AH0",
+            "L"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-1k08foz",
+          "partOfSpeech": "adj.",
+          "definitionZh": "表面的",
+          "definitionEn": "of, affecting, or being on or near the surface",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i15896) / Open English WordNet 2025",
+          "openSenseId": "superficial%3:01:00::",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-55o80k",
+              "text": "superficial measurements",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-5fntpj",
+              "text": "the superficial area of the wall",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "lucid"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1iphbgw"
+          ],
+          "confusableRationales": {
+            "sense-1iphbgw": "lucid 是透明清澈，superficial 只说明靠近外层。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02816313-a (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02816313-a members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense superficial%3:01:00:: antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i15896; exact: 表面+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 34,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1618063276,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-xcvuet",
+      "headword": "sweeping",
+      "normalizedHeadword": "sweeping",
+      "pronunciations": [
+        {
+          "ipa": "ˈswiːpɪŋ",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "swˈipɪŋ",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "S",
+            "W",
+            "IY1",
+            "P",
+            "IH0",
+            "NG"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-88671742",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-sweeping.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/LL-Q1860_%28eng%29-Vealhurl-sweeping.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-sweeping.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-iiywxw",
+          "partOfSpeech": "adj.",
+          "definitionZh": "广泛的",
+          "definitionEn": "taking in or moving over (or as if over) a wide area; often used in combination",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i14210) / Open English WordNet 2025",
+          "openSenseId": "sweeping%5:00:00:wide:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1qxzt3k",
+              "text": "a sweeping glance",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-1r7zesj",
+              "text": "a wide-sweeping view of the river",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "immense"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-9j3il"
+          ],
+          "confusableRationales": {
+            "sense-9j3il": "immense 是尺寸数量巨大，sweeping 是覆盖范围广。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02572290-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02572290-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense sweeping%5:00:00:wide:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i14210; exact: 广泛+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 35,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 2017024949,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-osa1wk",
+      "headword": "tawdry",
+      "normalizedHeadword": "tawdry",
+      "pronunciations": [
+        {
+          "ipa": "ˈtɔːdɹi",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "tˈɔdri",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "T",
+            "AO1",
+            "D",
+            "R",
+            "IY0"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-108031373",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-tawdry.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/LL-Q1860_%28eng%29-Vealhurl-tawdry.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-tawdry.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        },
+        {
+          "id": "commons-189908046",
+          "fileTitle": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-tawdry.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/LL-Q1860_%28eng%29-Naomi_Persephone_Amethyst_%28NaomiAmethyst%29-tawdry.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Naomi_Persephone_Amethyst_(NaomiAmethyst)-tawdry.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Naomi Persephone Amethyst Recorder: NaomiAmethyst",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1q5y0l4",
+          "partOfSpeech": "adj.",
+          "definitionZh": "俗气的",
+          "definitionEn": "tastelessly showy",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i13251) / Open English WordNet 2025",
+          "openSenseId": "tawdry%5:00:00:tasteless:02",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1bdczlo",
+              "text": "tawdry ornaments",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "brassy",
+              "cheap",
+              "flash",
+              "flashy",
+              "garish",
+              "gaudy",
+              "gimcrack",
+              "loud"
+            ],
+            "antonyms": [],
+            "confusables": [
+              "sparkling"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-1h9tg05"
+          ],
+          "confusableRationales": {
+            "sense-1h9tg05": "sparkling 是真正闪亮，不带廉价没品味评价。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02402358-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02402358-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense tawdry%5:00:00:tasteless:02 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i13251; exact: 俗气+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 36,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1498686500,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-pn89di",
+      "headword": "tortuous",
+      "normalizedHeadword": "tortuous",
+      "pronunciations": [
+        {
+          "ipa": "ˈtɔːt͡ʃuːəs",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈtɔɹt͡ʃuəs",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "tˈɔrtʃəwəs",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "T",
+            "AO1",
+            "R",
+            "CH",
+            "AH0",
+            "W",
+            "AH0",
+            "S"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-100854260",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-tortuous.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/LL-Q1860_%28eng%29-Vealhurl-tortuous.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-tortuous.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-xsbx4y",
+          "partOfSpeech": "adj.",
+          "definitionZh": "复杂难懂的",
+          "definitionEn": "highly complex or intricate and occasionally devious",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i11969) / Open English WordNet 2025",
+          "openSenseId": "tortuous%5:00:00:complex:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-ykh1z6",
+              "text": "tortuous legal procedures",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-yugno5",
+              "text": "tortuous negotiations lasting for months",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "byzantine",
+              "convoluted",
+              "involved",
+              "knotty",
+              "tangled",
+              "labyrinthine"
+            ],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02184401-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 02184401-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense tortuous%5:00:00:complex:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i11969; exact: 复杂难懂+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 37,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1550670966,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-t03ejp",
+      "headword": "utilitarian",
+      "normalizedHeadword": "utilitarian",
+      "pronunciations": [
+        {
+          "ipa": "juːˌtɪlɪˈtɛːɹi.ən",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "jutˌɪlətˈɛriən",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "Y",
+            "UW0",
+            "T",
+            "IH2",
+            "L",
+            "AH0",
+            "T",
+            "EH1",
+            "R",
+            "IY0",
+            "AH0",
+            "N"
+          ]
+        }
+      ],
+      "audioSources": [
+        {
+          "id": "commons-128663103",
+          "fileTitle": "File:LL-Q1860 (eng)-Vealhurl-utilitarian.wav",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/LL-Q1860_%28eng%29-Vealhurl-utilitarian.wav",
+          "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-utilitarian.wav",
+          "sourceLabel": "Lingua Libre / Wikimedia Commons",
+          "creator": "Speaker: Vealhurl Recorder: Vealhurl",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "dialect": "English",
+          "human": true,
+          "mimeType": "audio/wav"
+        }
+      ],
+      "senses": [
+        {
+          "id": "sense-1l56xsk",
+          "partOfSpeech": "adj.",
+          "definitionZh": "实用的",
+          "definitionEn": "having utility often to the exclusion of values",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i13849) / Open English WordNet 2025",
+          "openSenseId": "utilitarian%5:00:00:useful:00",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-1j3gcnz",
+              "text": "plain utilitarian kitchenware",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [],
+            "antonyms": [],
+            "confusables": [
+              "efficacious",
+              "frugal"
+            ]
+          },
+          "confusableSenseIds": [
+            "sense-116b80m",
+            "sense-20k93a"
+          ],
+          "confusableRationales": {
+            "sense-116b80m": "efficacious 是有效，utilitarian 是把实用置于其他价值前。",
+            "sense-20k93a": "frugal 是避免浪费，utilitarian 是按功能取舍。"
+          },
+          "confusableSource": "GRE Verbal Lab editorial semantic-distractor review 2026-07-13",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 02506656-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 synset 02506656-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense utilitarian%5:00:00:useful:00 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i13849; exact: 实用+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 38,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 1753677925,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    },
+    {
+      "id": "word-9b8102",
+      "headword": "vulgar",
+      "normalizedHeadword": "vulgar",
+      "pronunciations": [
+        {
+          "ipa": "ˈvʌl.ɡə",
+          "dialect": "GB",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "ˈvʌl.ɡɚ",
+          "dialect": "US",
+          "source": "Open English WordNet 2025",
+          "quality": "dictionary_ipa",
+          "reviewState": "source_verified",
+          "sourceUrl": "https://en-word.net/",
+          "license": "CC BY 4.0"
+        },
+        {
+          "ipa": "vˈʌlɡɚ",
+          "dialect": "US",
+          "source": "CMUdict",
+          "quality": "approximate_transcription",
+          "reviewState": "auto_transcribed",
+          "sourceUrl": "https://github.com/cmusphinx/cmudict",
+          "license": "CMUdict permissive notice",
+          "phonemes": [
+            "V",
+            "AH1",
+            "L",
+            "G",
+            "ER0"
+          ]
+        }
+      ],
+      "audioSources": [],
+      "senses": [
+        {
+          "id": "sense-umncfh",
+          "partOfSpeech": "adj.",
+          "definitionZh": "粗俗的",
+          "definitionEn": "lacking refinement or cultivation or taste",
+          "sourceLabel": "Chinese Open Wordnet 1.4 (i10673) / Open English WordNet 2025",
+          "openSenseId": "vulgar%5:00:00:unrefined:01",
+          "usageNote": "",
+          "contextNote": "",
+          "examples": [
+            {
+              "id": "ctx-q8gsoi",
+              "text": "appealing to the vulgar taste for violence",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            },
+            {
+              "id": "ctx-qigedh",
+              "text": "the vulgar display of the newly rich",
+              "kind": "dictionary",
+              "sourceLabel": "Open English WordNet 2025",
+              "provenance": "CC BY 4.0",
+              "reviewState": "source_verified",
+              "rightsState": "open_reuse",
+              "allowedIn": [
+                "public",
+                "private"
+              ],
+              "sourceUrl": "https://en-word.net/"
+            }
+          ],
+          "relations": {
+            "synonyms": [
+              "coarse",
+              "common",
+              "rough-cut",
+              "uncouth"
+            ],
+            "antonyms": [],
+            "confusables": []
+          },
+          "confusableSenseIds": [],
+          "confusableRationales": {},
+          "confusableSource": "",
+          "relationState": "verified",
+          "relationSource": "Open English WordNet 2025 synset 01957020-s (CC BY 4.0)",
+          "relationEvidence": {
+            "synonyms": {
+              "state": "verified_present",
+              "source": "Open English WordNet 2025 synset 01957020-s members (CC BY 4.0)"
+            },
+            "antonyms": {
+              "state": "source_checked_absent",
+              "source": "Open English WordNet 2025 lexical sense vulgar%5:00:00:unrefined:01 antonym relation (CC BY 4.0)"
+            }
+          },
+          "studyReviewState": "unreviewed",
+          "studyReviewNote": "Formal-sense semantic distractors reviewed on 2026-07-13.",
+          "quizRole": "target_and_distractor",
+          "enrichmentState": "auto_candidate",
+          "alignmentState": "verified",
+          "alignmentScore": 1,
+          "alignmentSource": "Chinese Open Wordnet 1.4 via CILI i10673; exact: 粗俗+的"
+        }
+      ],
+      "sourceFiles": [
+        "Chinese Open Wordnet 1.4",
+        "Open English WordNet 2025",
+        "CMUdict"
+      ],
+      "initialLapses": 0,
+      "sourceConsensus": false,
+      "frequencyProfile": {
+        "tier": "focus",
+        "rank": 39,
+        "priorityScore": 70,
+        "localMaterialCount": 0,
+        "officialMaterialCount": 0,
+        "evidenceBySource": {}
+      },
+      "order": 563045906,
+      "createdAt": "2026-07-13T11:16:10.994Z",
+      "updatedAt": "2026-07-13T11:16:10.994Z"
+    }
+  ]
+}

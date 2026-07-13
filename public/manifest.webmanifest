@@ -1,0 +1,15 @@
+{
+  "name": "GRE Verbal Lab",
+  "short_name": "Verbal Lab",
+  "description": "Database-first adaptive GRE vocabulary learning.",
+  "start_url": "/gre-verbal-lab/",
+  "scope": "/gre-verbal-lab/",
+  "display": "standalone",
+  "background_color": "#f4f1ea",
+  "theme_color": "#102a43",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
