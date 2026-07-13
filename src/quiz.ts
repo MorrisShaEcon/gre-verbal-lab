@@ -409,16 +409,16 @@ export function evaluateDefinitionQuizAnswer(
     inferredConfidence = 1;
     responseBand = "incorrect";
     masteryDecision = "not_mastered";
-    feedbackTitle = "还没有记牢";
-    feedbackDetail = "系统已记录这次混淆；本轮稍后会再次出现，并缩短下次复习间隔。";
+    feedbackTitle = "这次混淆了";
+    feedbackDetail = "这次易混项已经记下，本轮稍后会再遇见它，下次复习也会提前。";
   } else if (previousLearning.reviewCount === 0) {
     // A four-option first encounter has a 25% guess baseline, so one hit is evidence of learning, not mastery.
     rating = "hard";
     inferredConfidence = 2;
     responseBand = "first_exposure";
     masteryDecision = "learning";
-    feedbackTitle = "第一次答对";
-    feedbackDetail = "这说明你初步识别了词义，但还不能判定为掌握；系统会在较短间隔后复测。";
+    feedbackTitle = "第一次认对";
+    feedbackDetail = "你已经抓到核心意思，还需要再回忆几次，记忆才会真正变稳。";
   } else if (
     previousLearning.lastRating === "again"
     || (previousLearning.lastRating === "hard" && previousLearning.definitionMastery < 14)
@@ -427,22 +427,22 @@ export function evaluateDefinitionQuizAnswer(
     inferredConfidence = 2;
     responseBand = "effortful";
     masteryDecision = "learning";
-    feedbackTitle = "答对了，但提取还不稳定";
-    feedbackDetail = "系统会保守缩短间隔，避免把刚纠正的答案误判为掌握。";
+    feedbackTitle = "答对了，还需巩固";
+    feedbackDetail = "刚纠正的记忆还不够稳定，它会在更短的间隔后回来。";
   } else if (!useResponseTime) {
     rating = "good";
     inferredConfidence = 2;
     responseBand = "timing_unscored";
     masteryDecision = previousLearning.definitionMastery >= 55 ? "remembered" : "learning";
-    feedbackTitle = "回答正确";
-    feedbackDetail = "本次只依据正确性和历史记录安排复习，没有使用作答速度。";
+    feedbackTitle = "记忆稳定";
+    feedbackDetail = "这次会根据正确性与复习历史安排下次出现，没有使用作答速度。";
   } else if (normalizedResponseTimeMs > 20_000) {
     rating = "hard";
     inferredConfidence = 1;
     responseBand = "effortful";
     masteryDecision = "learning";
-    feedbackTitle = "答对了，但提取还不稳定";
-    feedbackDetail = "本次回忆耗时较长，系统会保守缩短复习间隔。";
+    feedbackTitle = "答对了，还需巩固";
+    feedbackDetail = "这次回忆花了更久，它会在较短间隔后回来，帮你提取得更流畅。";
   } else if (
     normalizedResponseTimeMs <= 6_000
     && previousLearning.reviewCount >= 3
@@ -453,15 +453,15 @@ export function evaluateDefinitionQuizAnswer(
     inferredConfidence = 3;
     responseBand = "fluent";
     masteryDecision = "fluent";
-    feedbackTitle = "快速稳定提取";
-    feedbackDetail = "多次间隔复习后仍能快速答对，系统将显著延长下次复习间隔。";
+    feedbackTitle = "已经很熟练";
+    feedbackDetail = "经过多次间隔复习仍能快速认出它，下次见面的间隔会明显延长。";
   } else {
     rating = "good";
     inferredConfidence = normalizedResponseTimeMs <= 10_000 ? 3 : 2;
     responseBand = "recalled";
     masteryDecision = previousLearning.definitionMastery >= 55 ? "remembered" : "learning";
-    feedbackTitle = "回答正确";
-    feedbackDetail = "系统结合正确性、作答速度和历史表现，判定为一次有效回忆。";
+    feedbackTitle = "记忆稳定";
+    feedbackDetail = "这次回答会和速度、历史表现一起计入记忆强度。";
   }
 
   return {

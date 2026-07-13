@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { playPronunciation, preferredAudioSource, stopPronunciation } from "./audio";
 import { loadVocabularyCatalog } from "./catalog";
 import { downloadBackup, loadAppData, readBackup, replaceAppData, resetAppData, saveAppData } from "./db";
@@ -48,16 +48,59 @@ import {
   type WordEntry,
   type WordSense,
 } from "./types";
+import {
+  BookOpenIcon,
+  BrainIcon,
+  CalendarIcon,
+  CheckIcon,
+  ChevronRightIcon,
+  ClockIcon,
+  HistoryIcon,
+  InfoIcon,
+  NetworkIcon,
+  ProgressIcon,
+  SettingsIcon,
+  SparklesIcon,
+  TargetIcon,
+  VolumeIcon,
+} from "./ui-icons";
 
 type Tab = "today" | "import" | "library" | "mistakes" | "progress" | "settings";
 
-const tabLabels: Array<{ id: Tab; label: string; icon: string }> = [
-  { id: "today", label: "今日学习", icon: "◉" },
-  { id: "library", label: "词义网络", icon: "⌘" },
-  { id: "mistakes", label: "错题回炉", icon: "↺" },
-  { id: "progress", label: "学习进度", icon: "▥" },
-  { id: "settings", label: "设置与备份", icon: "⚙" },
+const tabLabels: Array<{ id: Tab; label: string; icon: typeof SparklesIcon }> = [
+  { id: "today", label: "今日", icon: SparklesIcon },
+  { id: "library", label: "词义图谱", icon: NetworkIcon },
+  { id: "mistakes", label: "错题本", icon: HistoryIcon },
+  { id: "progress", label: "学习轨迹", icon: ProgressIcon },
+  { id: "settings", label: "设置", icon: SettingsIcon },
 ];
+
+interface PageHeadingProps {
+  icon: typeof SparklesIcon;
+  kicker: string;
+  title: string;
+  description: ReactNode;
+  action?: ReactNode;
+  chips?: Array<{ label: string; icon: typeof SparklesIcon }>;
+  className?: string;
+}
+
+function PageHeading({ icon: HeadingIcon, kicker, title, description, action, chips, className = "" }: PageHeadingProps) {
+  return (
+    <div className={`page-heading page-heading-refined ${className}`.trim()}>
+      <div className="page-heading-copy">
+        <div className="heading-kicker"><span className="heading-icon"><HeadingIcon size={18} /></span><span>{kicker}</span></div>
+        <h1>{title}</h1>
+        <p className="heading-description">{description}</p>
+        {chips?.length ? <div className="heading-chips">{chips.map((chip) => {
+          const ChipIcon = chip.icon;
+          return <span key={chip.label}><ChipIcon size={14} />{chip.label}</span>;
+        })}</div> : null}
+      </div>
+      {action}
+    </div>
+  );
+}
 
 const ratingLabels: Record<Rating, { label: string; hint: string; key: string }> = {
   again: { label: "答错", hint: "10分钟后再来", key: "1" },
@@ -523,6 +566,24 @@ function App() {
   const selectedWord = filteredWords.find((word) => word.id === selectedWordId) ?? filteredWords[0] ?? null;
   const selectedSense = selectedWord?.senses.find((sense) => sense.id === selectedSenseId) ?? selectedWord?.senses[0] ?? null;
   const selectedAudio = selectedWord ? audioSourceFor(selectedWord) : null;
+  const examTargetMs = new Date(`${data.settings.examDate}T12:00:00`).getTime();
+  const examDays = Number.isFinite(examTargetMs) ? Math.max(0, Math.ceil((examTargetMs - clockNowMs) / 86_400_000)) : 0;
+  const todayHeading = currentCard
+    ? answerFeedback
+      ? answerFeedback.isCorrect
+        ? { kicker: `今日练习 · ${sessionIndex + 1}/${sessionQueue.length}`, title: "认出来了，再把语境一起记住", description: "把这次识别和词义关系、例句及 GRE 语境连在一起。" }
+        : { kicker: `今日练习 · ${sessionIndex + 1}/${sessionQueue.length}`, title: "这次混淆了，正好记得更牢", description: "先看清差异和语境；这次易混项会自动进入强化队列。" }
+      : { kicker: `今日练习 · ${sessionIndex + 1}/${sessionQueue.length}`, title: "先凭记忆，选出最贴切的意思", description: "提交答案后，再展开释义、词义关系与语境证据。" }
+    : sessionComplete
+      ? { kicker: "随心续学", title: "这一轮完成了，想继续就再学一组", description: "进度已经保存；停在这里或继续探索，都不会打乱你的复习节奏。" }
+      : { kicker: "今日节奏", title: "今天想学多少，由你决定", description: "设定新词量后，系统会把到期复习、高频重点与低频拓展重新组合。" };
+  const currentCardCoachCopy = currentCard
+    ? currentCard.isNew
+      ? currentCard.word.frequencyProfile.tier === "focus"
+        ? "这是第一次见面，也是一枚高频重点词。先凭直觉作答。"
+        : "这是第一次见面。低频拓展词会穿插出现，帮你逐步扩大词汇边界。"
+      : "它到了该回忆的时间，试着先从记忆里把意思找回来。"
+    : "";
 
   useEffect(() => {
     if (selectedWord && selectedWordId !== selectedWord.id) setSelectedWordId(selectedWord.id);
@@ -1092,30 +1153,47 @@ function App() {
       <aside className="sidebar">
         <div className="brand">
           <img className="brand-mark brand-icon" src={`${import.meta.env.BASE_URL}icon-192.png`} alt="" />
-          <div><strong>GRE Verbal Lab</strong><span>Personal adaptive vocabulary</span></div>
+          <div><strong>GRE Verbal Lab</strong><span>你的 GRE 词汇训练室</span></div>
         </div>
         <nav aria-label="主要功能">
-          {tabLabels.map((item) => (
-            <button key={item.id} className={tab === item.id ? "nav-item active" : "nav-item"} onClick={() => setTab(item.id)}>
-              <span aria-hidden="true">{item.icon}</span>{item.label}
-            </button>
-          ))}
+          {tabLabels.map((item) => {
+            const NavIcon = item.icon;
+            return <button key={item.id} className={tab === item.id ? "nav-item active" : "nav-item"} onClick={() => setTab(item.id)}>
+              <span className="nav-icon"><NavIcon size={20} /></span><span className="nav-label">{item.label}</span>
+            </button>;
+          })}
         </nav>
-        <div className="privacy-card"><strong>只保存在本机</strong><p>词库、错题和复习记录不会自动上传。</p></div>
-        <div className="version">v2.2.0 alpha · private context</div>
+        <div className="privacy-card"><div className="privacy-card-title"><InfoIcon size={17} /><strong>数据留在这里</strong></div><p>学习记录与错题截图只存于这台设备。</p></div>
+        <div className="version">v2.2.0 alpha.2 · 私人版</div>
       </aside>
 
       <main className="main-content">
         <header className="topbar">
-          <div><p className="eyebrow">距离目标考试</p><strong>{Math.max(0, Math.ceil((new Date(`${data.settings.examDate}T12:00:00`).getTime() - Date.now()) / 86_400_000))} 天</strong></div>
-          <div className="top-metrics"><span><b>{formalWords.length.toLocaleString()}</b> 正式词</span><span><b>{learnedSenses.length.toLocaleString()}</b> 已学义项</span><span><b>{dueCount}</b> 到期</span></div>
+          <div className="countdown-card"><span className="top-icon"><TargetIcon size={19} /></span><div><small>距考试还有</small><strong>{examDays}<em>天</em></strong></div></div>
+          <div className="top-metrics">
+            <span className="top-stat"><BookOpenIcon size={17} /><span><b>{formalWords.length.toLocaleString()}</b><small>可学词</small></span></span>
+            <span className="top-stat"><CheckIcon size={17} /><span><b>{learnedSenses.length.toLocaleString()}</b><small>已学习</small></span></span>
+            <span className={`top-stat${dueCount ? " due" : ""}`}><ClockIcon size={17} /><span><b>{dueCount}</b><small>待复习</small></span></span>
+          </div>
         </header>
 
         {notice && <button className="notice" onClick={() => setNotice("")}>{notice}<span>×</span></button>}
 
         {tab === "today" && (
           <section className="page-section">
-            <div className="page-heading"><div><p className="eyebrow">TODAY</p><h1>系统出题，你来作答</h1><p>{data.catalogVersion.includes("personal") ? "每次都是 1 个正确释义和 3 个绑定到具体词义、经过编辑审核的易混项；你曾选错的义项会在之后优先重现。" : "每次都是 1 个正确释义和 3 个通过正式内容门槛的备选义项；你曾选错的义项会在之后优先重现。"}</p></div><div className="date-chip">{new Intl.DateTimeFormat("zh-CN", { month: "long", day: "numeric", weekday: "short" }).format(new Date())}</div></div>
+            <PageHeading
+              icon={SparklesIcon}
+              kicker={todayHeading.kicker}
+              title={todayHeading.title}
+              description={todayHeading.description}
+              className={`today-heading${currentCard ? " in-session" : ""}`}
+              chips={currentCard ? undefined : [
+                { label: "四选一回忆", icon: CheckIcon },
+                { label: "自适应复习", icon: BrainIcon },
+                { label: "语境证据", icon: BookOpenIcon },
+              ]}
+              action={<div className="date-chip"><CalendarIcon size={15} /><span>{new Intl.DateTimeFormat("zh-CN", { month: "long", day: "numeric", weekday: "short" }).format(new Date())}</span></div>}
+            />
             {!data.words.length ? (
               <div className="empty-state"><div className="empty-icon">!</div><h2>默认数据库为空</h2><p>这不是正常的首次使用状态，请重新生成或恢复数据库。</p></div>
             ) : currentCard ? (
@@ -1132,17 +1210,20 @@ function App() {
                     if (answerFeedback && event.key === "Enter") { event.preventDefault(); advanceCard(); }
                   }}
                 >
-                  <div className="study-meta"><span>{sessionIndex + 1} / {sessionQueue.length}</span><span>{currentCard.isNew ? "新词义" : "到期复习"}</span><span className={currentCard.word.frequencyProfile.tier === "focus" ? "tier focus" : "tier tail"}>{currentCard.word.frequencyProfile.tier === "focus" ? "70% 重点层" : "30% 长尾层"}</span></div>
-                  <div className="headword-line"><div className="headword">{currentCard.word.headword}</div><button className="audio-button" disabled={audioBusy} onClick={() => void speak(currentCard.word)} aria-label={`朗读 ${currentCard.word.headword}`}>{audioBusy ? "…" : "▶"}</button></div>
+                  <div className="study-meta">
+                    <div className="study-progress"><span><b>{sessionIndex + 1}</b> / {sessionQueue.length}</span><i><b style={{ width: `${Math.max(4, ((sessionIndex + 1) / Math.max(1, sessionQueue.length)) * 100)}%` }} /></i></div>
+                    <div className="study-badges"><span className="study-badge"><BookOpenIcon size={13} />{currentCard.isNew ? "初次见面" : "再次回忆"}</span><span className={currentCard.word.frequencyProfile.tier === "focus" ? "study-badge tier focus" : "study-badge tier tail"}><TargetIcon size={13} />{currentCard.word.frequencyProfile.tier === "focus" ? "高频重点" : "低频拓展"}</span></div>
+                  </div>
+                  <div className="headword-line"><div className="headword">{currentCard.word.headword}</div><button className="audio-button" disabled={audioBusy} onClick={() => void speak(currentCard.word)} aria-label={`朗读 ${currentCard.word.headword}`}>{audioBusy ? "…" : <VolumeIcon size={18} />}</button></div>
                   {currentPronunciation && <div className="pronunciation-line"><span>{currentPronunciation.dialect}</span> /{currentPronunciation.ipa}/ <small>{currentPronunciation.sourceUrl ? <a href={currentPronunciation.sourceUrl} target="_blank" rel="noreferrer">{currentPronunciation.source}</a> : currentPronunciation.source}</small></div>}
                   <div className="audio-provenance">
                     {currentAudio ? <><b>真人录音 · {currentAudio.dialect} · {currentAudio.creator}</b><a href={currentAudio.sourcePageUrl} target="_blank" rel="noreferrer">{currentAudio.sourceLabel}</a><a href={currentAudio.licenseUrl} target="_blank" rel="noreferrer">{currentAudio.license}</a></> : <b className="fallback">点击后查询开放许可真人录音；无合格结果时使用系统备用音</b>}
                     <span>{([0.8, 1] as const).map((rate) => <button key={rate} className={data.settings.audioPlaybackRate === rate ? "active" : ""} onClick={() => updateSetting("audioPlaybackRate", rate)}>{rate}×</button>)}</span>
                   </div>
                   {audioMessage && <p className="audio-message">{audioMessage}</p>}
-                  <div className="sense-index">义项 {currentCard.word.senses.findIndex((sense) => sense.id === currentCard.sense.id) + 1} / {currentCard.word.senses.length}</div>
+                  <div className="sense-index">词义 {currentCard.word.senses.findIndex((sense) => sense.id === currentCard.sense.id) + 1} / {currentCard.word.senses.length}</div>
                   {!currentQuestion ? <div className="quiz-error">当前词义无法生成不歧义的四个选项，已停止作答以免污染学习记录。</div> : <>
-                    <div className="quiz-prompt"><span>选择最准确的中文释义</span><small>按数字键 1–4 作答</small></div>
+                    <div className="quiz-prompt"><span>它最接近哪一个意思？</span><small>按数字键 1–4 作答</small></div>
                     <div className="option-grid" role="radiogroup" aria-label={`${currentCard.word.headword} 的中文释义`}>
                       {currentQuestion.options.map((option, index) => {
                         const selected = answerFeedback?.selectedOptionId === option.id;
@@ -1155,7 +1236,7 @@ function App() {
                           disabled={Boolean(answerFeedback)}
                           className={`quiz-option${correct ? " correct" : ""}${wrong ? " wrong" : ""}${selected ? " selected" : ""}`}
                           onClick={() => answerQuestion(option.id)}
-                        ><span>{index + 1}</span><strong>{option.text}</strong>{answerFeedback && correct && <em>正确答案</em>}{wrong && <em>你的选择</em>}</button>;
+                        ><span>{index + 1}</span><strong>{option.text}</strong>{answerFeedback && correct && <em>答案</em>}{wrong && <em>你的选择</em>}</button>;
                       })}
                     </div>
                   </>}
@@ -1179,68 +1260,80 @@ function App() {
                       <ConfusableEvidence data={data} sense={currentCard.sense} />
                       {currentExamples.slice(0, 2).map((example) => <div className="example-panel" key={example.id}><div><span>带来源例句</span><em>{exampleKindLabel(example.kind)}</em></div><blockquote>{highlightTarget(example.text, currentCard.word.normalizedHeadword)}</blockquote>{example.translationZh && <p>{example.translationZh}</p>}<small>{example.sourceUrl ? <a href={example.sourceUrl} target="_blank" rel="noreferrer">{example.sourceLabel}</a> : example.sourceLabel} · {example.provenance}</small></div>)}
                       <GreQuestionEvidence sense={currentCard.sense} headword={currentCard.word.normalizedHeadword} compact />
-                      <button className="next-card-button" onClick={advanceCard}>下一词 <kbd>Enter</kbd></button>
+                      <button className="next-card-button" onClick={advanceCard}>继续 <ChevronRightIcon size={16} /><kbd>Enter</kbd></button>
                     </div>
                   )}
                 </div>
-                <aside className="reason-panel"><p className="eyebrow">SYSTEM JUDGMENT</p><h3>{answerFeedback ? answerFeedback.feedbackTitle : "等待你的答案"}</h3><p>{answerFeedback ? answerFeedback.feedbackDetail : currentCard.reason}</p><dl><div><dt>学习优先级</dt><dd>#{currentCard.word.frequencyProfile.rank || "—"}</dd></div><div><dt>本地材料遇见</dt><dd>{currentCard.word.frequencyProfile.localMaterialCount} 次</dd></div><div><dt>当前掌握度</dt><dd>{currentLearningState?.definitionMastery ?? 0}%</dd></div><div><dt>遗忘次数</dt><dd>{currentLearningState?.lapseCount ?? 0}</dd></div><div><dt>上次复习</dt><dd>{formatDate(currentLearningState?.lastReviewedAt ?? null)}</dd></div></dl><small className="evidence-note">掌握度由答案、历史正确率和反应时间推断，不再让你自我打分。</small></aside>
+                <aside className={`reason-panel${answerFeedback ? answerFeedback.isCorrect ? " is-correct" : " is-wrong" : ""}`}>
+                  <div className="reason-heading"><span className="reason-icon">{answerFeedback?.isCorrect ? <CheckIcon size={20} /> : <BrainIcon size={20} />}</span><div><span>学习反馈</span><h3>{answerFeedback ? answerFeedback.feedbackTitle : "先凭记忆选一个"}</h3></div></div>
+                  <p className="reason-copy">{answerFeedback ? answerFeedback.feedbackDetail : currentCardCoachCopy}</p>
+                  {!answerFeedback && <details className="reason-detail"><summary>为什么现在出现</summary><p>{currentCard.reason}</p></details>}
+                  <div className="mastery-snapshot"><div className="feedback-ring" style={{ "--value": `${currentLearningState?.definitionMastery ?? 0}%` } as React.CSSProperties}><strong>{currentLearningState?.definitionMastery ?? 0}%</strong></div><div><span>记忆强度</span><small>随每次作答自动更新</small></div></div>
+                  <dl>
+                    <div><dt><TargetIcon size={14} />词库排序</dt><dd>#{currentCard.word.frequencyProfile.rank || "—"}</dd></div>
+                    <div><dt><BookOpenIcon size={14} />题库出现</dt><dd>{currentCard.word.frequencyProfile.localMaterialCount} 次</dd></div>
+                    <div><dt><HistoryIcon size={14} />遗忘记录</dt><dd>{currentLearningState?.lapseCount ?? 0}</dd></div>
+                    <div><dt><ClockIcon size={14} />最近学习</dt><dd>{formatDate(currentLearningState?.lastReviewedAt ?? null)}</dd></div>
+                  </dl>
+                  <small className="evidence-note">掌握度根据正确率、复习历史与作答速度自动估算。</small>
+                </aside>
               </div>
             ) : (
               <>
                 <div className="goal-planner">
                   <div>
-                    <p className="eyebrow">TODAY'S TARGET</p>
-                    <h2>今天想新学多少个词？</h2>
-                    <p>不是固定打卡量。你可以每天重新决定，系统会立刻重排今日队列并更新预计完成日期。</p>
+                    <p className="eyebrow">今日目标</p>
+                    <h2>今天想认识多少个新词？</h2>
+                    <p>按你的时间来。调整数量后，今日任务和预计完成日期会同步更新。</p>
                   </div>
                   <div className="goal-control">
-                    <label>今日新词目标<input type="number" min="1" max="200" value={dailyGoalDraft} onChange={(event) => setDailyGoalDraft(Number(event.target.value))} /></label>
-                    <button className="secondary-button" onClick={confirmDailyGoal}>确认并重排</button>
+                    <label>新词数量<input type="number" min="1" max="200" value={dailyGoalDraft} onChange={(event) => setDailyGoalDraft(Number(event.target.value))} /></label>
+                    <button className="secondary-button" onClick={confirmDailyGoal}>更新今日计划</button>
                   </div>
                   <div className="goal-forecast" aria-label="学习进度预测">
-                    <span><b>{studyForecast.remainingTargetCount}</b><small>当前未学的正式词</small></span>
-                    <span><b>{studyForecast.studyDays}</b><small>按当前目标所需学习日</small></span>
-                    <span><b>{studyForecast.studyDays ? new Intl.DateTimeFormat("zh-CN", { month: "short", day: "numeric" }).format(new Date(`${studyForecast.estimatedCompletionDate}T12:00:00`)) : "已完成"}</b><small>预计学完新词</small></span>
+                    <span><b>{studyForecast.remainingTargetCount}</b><small>待学词义</small></span>
+                    <span><b>{studyForecast.studyDays}</b><small>预计学习天数</small></span>
+                    <span><b>{studyForecast.studyDays ? new Intl.DateTimeFormat("zh-CN", { month: "short", day: "numeric" }).format(new Date(`${studyForecast.estimatedCompletionDate}T12:00:00`)) : "已完成"}</b><small>预计完成</small></span>
                   </div>
                 </div>
-                <div className="mix-summary"><span><b>{dailyPlan.focusCount}</b> 重点词</span><i>70%</i><span><b>{dailyPlan.longTailCount}</b> 长尾词</span><i>30%</i><small>分层乱序 · 只安排 IPA、词汇关系、义项与例句都通过门槛的词</small></div>
-                <div className="metric-grid"><article><span>今日四选一</span><strong>{dailyQueue.length}</strong><small>{dailyQueue.filter((item) => item.isNew).length} 个新词 · {dailyQueue.filter((item) => !item.isNew).length} 个复习</small></article><article><span>出题合格词</span><strong>{contentReadyWords.toLocaleString()}</strong><small>只统计完整通过四项证据门槛的词</small></article><article><span>预计用时</span><strong>{Math.max(1, Math.ceil(dailyQueue.length * 1.1))}<em> 分钟</em></strong><small>作答后才显示释义、关系和例句</small></article></div>
-                <div className="queue-card"><div><p className="eyebrow">ADAPTIVE QUEUE</p><h2>{sessionComplete ? "本轮完成，还可以继续" : "准备开始今日学习"}</h2><p>{sessionComplete ? `结果已经保存。当前还有 ${extraNewWordCount} 个未进入既有日计划的新词可追加。` : dailyQueue[0]?.reason ?? "今天没有到期项目；你仍可继续领取新词。"}</p></div>{sessionComplete || !dailyQueue.length ? <div className="continue-control"><label>再学<input type="number" min="1" max="200" value={additionalBatchSize} onChange={(event) => setAdditionalBatchSize(Number(event.target.value))} /><span>词</span></label><button className="primary-button" disabled={!extraNewWordCount} onClick={continueWithNewWords}>继续学新词</button>{dailyQueue.length > 0 && <button className="secondary-button" onClick={startSession}>先做当前复习</button>}</div> : <button className="primary-button" onClick={startSession}>开始学习</button>}</div>
+                <div className="mix-summary"><span><b>{dailyPlan.focusCount}</b> 高频重点</span><i>70%</i><span><b>{dailyPlan.longTailCount}</b> 低频拓展</span><i>30%</i><small>高频打底，长尾穿插；每天都会重新打散顺序。</small></div>
+                <div className="metric-grid"><article><span className="metric-label"><CheckIcon size={16} />今日任务</span><strong>{dailyQueue.length}</strong><small>{dailyQueue.filter((item) => item.isNew).length} 个新词 · {dailyQueue.filter((item) => !item.isNew).length} 个复习</small></article><article><span className="metric-label"><BookOpenIcon size={16} />可练词义</span><strong>{contentReadyWords.toLocaleString()}</strong><small>释义、发音、关系与语境均已校验</small></article><article><span className="metric-label"><ClockIcon size={16} />预计用时</span><strong>{Math.max(1, Math.ceil(dailyQueue.length * 1.1))}<em> 分钟</em></strong><small>释义与语境会在作答后展开</small></article></div>
+                <div className="queue-card"><div><p className="queue-kicker"><BrainIcon size={15} />下一步</p><h2>{sessionComplete ? "这一轮，完成了" : "准备好了，就开始"}</h2><p>{sessionComplete ? `进度已保存，还有 ${extraNewWordCount} 个新词可以继续探索。` : dailyQueue[0]?.reason ?? "今天没有到期项目；你仍可继续领取新词。"}</p></div>{sessionComplete || !dailyQueue.length ? <div className="continue-control"><label>下一组<input type="number" min="1" max="200" value={additionalBatchSize} onChange={(event) => setAdditionalBatchSize(Number(event.target.value))} /><span>个</span></label><button className="primary-button" disabled={!extraNewWordCount} onClick={continueWithNewWords}>再学一组</button>{dailyQueue.length > 0 && <button className="secondary-button" onClick={startSession}>先完成复习</button>}</div> : <button className="primary-button" onClick={startSession}>开始这一轮 <ChevronRightIcon size={16} /></button>}</div>
               </>
             )}
           </section>
         )}
 
         {tab === "import" && (
-          <section className="page-section narrow"><div className="page-heading"><div><p className="eyebrow">PRIVATE IMPORT</p><h1>导入本地词库</h1><p>如需重建个人数据库，可同时选择核心词表和补充词表：前者定义核心范围，后者补充多义项。</p></div></div>
+          <section className="page-section narrow"><PageHeading icon={BookOpenIcon} kicker="本机词库" title="导入个人词库" description="如需重建个人数据库，可同时选择核心词表和补充词表；所有解析都在这台设备上完成。" />
             <label className="drop-zone"><input type="file" multiple accept=".xlsx,.csv" onChange={(event) => void handleFiles(Array.from(event.target.files ?? []))}/><span className="drop-icon">↥</span><strong>{importBusy ? "正在本机解析…" : "选择 XLSX 或 CSV 文件"}</strong><small>可以一次选择两个文件 · 原文件不会上传</small></label>
             {importMessage && <p className="inline-message">{importMessage}</p>}
             {importPreview && <div className="import-preview"><div className="preview-stats"><article><strong>{importPreview.stats.wordCount.toLocaleString()}</strong><span>唯一词条</span></article><article><strong>{importPreview.stats.senseCount.toLocaleString()}</strong><span>词义</span></article><article><strong>{importPreview.stats.enrichedWords.toLocaleString()}</strong><span>获得多义补充</span></article><article><strong>{importPreview.stats.skippedRows.toLocaleString()}</strong><span>跳过标题/空行</span></article></div><div className="source-list"><strong>识别到的文件</strong>{importPreview.stats.sourceFiles.map((file) => <span key={file}>{file}</span>)}</div><button className="primary-button" onClick={commitImport}>确认导入并生成学习计划</button></div>}
-            <div className="privacy-explainer"><h3>隐私与版权边界</h3><p>浏览器只提取学习所需的词、词性和释义，数据写入 IndexedDB。本项目的 GitHub 仓库和备份之外不会自动发送这些内容。</p></div>
+            <div className="privacy-explainer"><h3>数据如何处理</h3><p>浏览器只提取学习所需的词、词性和释义，数据写入 IndexedDB。本项目的 GitHub 仓库和备份之外不会自动发送这些内容。</p></div>
           </section>
         )}
 
         {tab === "library" && (
-          <section className="page-section"><div className="page-heading"><div><p className="eyebrow">VERIFIED WORD-SENSE LIBRARY</p><h1>正式词义库</h1><p>这里只展示通过义项对齐、词性、音标、关系来源和目标词例句门槛的内容；后台素材不会冒充成已校对词条。</p></div><input className="search-box" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索正式单词或中文释义…" /></div>
+          <section className="page-section"><PageHeading icon={NetworkIcon} kicker="词义探索" title="把一个词，真正学清楚" description="查发音、辨义项、看近反义词，再回到它在 GRE 题目中的真实语境。" action={<div className="search-control"><NetworkIcon size={17} /><input className="search-box" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索单词或中文释义…" /></div>} />
             {!formalWords.length ? <div className="empty-state"><h2>目前没有通过全部校对门槛的词义</h2><p>请使用已审计的内置数据库版本。</p></div> : <div className="library-layout"><div className="word-list">{filteredWords.map((word) => { const reviewed = word.senses.filter((sense) => (data.learning[sense.id]?.reviewCount ?? 0) > 0).length; return <button key={word.id} className={selectedWord?.id === word.id ? "word-row active" : "word-row"} onClick={() => { setSelectedWordId(word.id); setSelectedSenseId(word.senses[0]?.id ?? null); }}><span><strong>{word.headword}</strong><small>{word.senses[0]?.definitionZh}</small></span><em>{reviewed}/{word.senses.length}</em></button>; })}</div>
-              {selectedWord && selectedSense && <div className="word-detail"><div className="word-title"><div><p className="eyebrow">HEADWORD</p><div className="library-headword"><h2>{selectedWord.headword}</h2><button className="audio-button" disabled={audioBusy} onClick={() => void speak(selectedWord)}>▶</button></div><div className="pronunciation-line">{trustedPronunciations(selectedWord).map((item) => <span key={`${item.dialect}-${item.ipa}`}>{item.dialect} /{item.ipa}/</span>)}</div>{selectedAudio && <div className="library-audio-source">真人录音 · {selectedAudio.creator} · <a href={selectedAudio.sourcePageUrl} target="_blank" rel="noreferrer">{selectedAudio.sourceLabel}</a> · <a href={selectedAudio.licenseUrl} target="_blank" rel="noreferrer">{selectedAudio.license}</a></div>}<span>{selectedWord.senses.length} 个正式词义 · 优先级 #{selectedWord.frequencyProfile.rank || "—"} · 本地材料 {selectedWord.frequencyProfile.localMaterialCount} 次</span></div><div className="mastery-ring" style={{ "--value": `${data.learning[selectedSense.id]?.definitionMastery ?? 0}%` } as React.CSSProperties}><b>{data.learning[selectedSense.id]?.definitionMastery ?? 0}%</b></div></div>
+              {selectedWord && selectedSense && <div className="word-detail"><div className="word-title"><div><p className="eyebrow">当前词条</p><div className="library-headword"><h2>{selectedWord.headword}</h2><button className="audio-button" disabled={audioBusy} onClick={() => void speak(selectedWord)} aria-label={`朗读 ${selectedWord.headword}`}><VolumeIcon size={18} /></button></div><div className="pronunciation-line">{trustedPronunciations(selectedWord).map((item) => <span key={`${item.dialect}-${item.ipa}`}>{item.dialect} /{item.ipa}/</span>)}</div>{selectedAudio && <div className="library-audio-source">真人录音 · {selectedAudio.creator} · <a href={selectedAudio.sourcePageUrl} target="_blank" rel="noreferrer">{selectedAudio.sourceLabel}</a> · <a href={selectedAudio.licenseUrl} target="_blank" rel="noreferrer">{selectedAudio.license}</a></div>}<span>{selectedWord.senses.length} 个词义 · 词库排序 #{selectedWord.frequencyProfile.rank || "—"} · 题库出现 {selectedWord.frequencyProfile.localMaterialCount} 次</span></div><div className="mastery-ring" style={{ "--value": `${data.learning[selectedSense.id]?.definitionMastery ?? 0}%` } as React.CSSProperties}><b>{data.learning[selectedSense.id]?.definitionMastery ?? 0}%</b></div></div>
                 <div className="sense-tabs">{selectedWord.senses.map((sense, index) => <button key={sense.id} className={sense.id === selectedSense.id ? "active" : ""} onClick={() => setSelectedSenseId(sense.id)}>义项 {index + 1}</button>)}</div>
                 <div className="definition-panel"><span>{selectedSense.partOfSpeech || "词义"}</span><strong>{selectedSense.definitionZh}</strong>{selectedSense.definitionEn && <p>{selectedSense.definitionEn}</p>}<div className="library-relations"><span>≈ {selectedSense.relations.synonyms.join(" · ") || relationMissingLabel(selectedSense, "synonyms")}</span><span>↔ {selectedSense.relations.antonyms.join(" · ") || relationMissingLabel(selectedSense, "antonyms")}</span>{selectedSense.relations.confusables.length > 0 && <span>易混：{selectedSense.relations.confusables.join(" · ")}</span>}</div><RelationEvidence sense={selectedSense} /><ConfusableEvidence data={data} sense={selectedSense} />{studyExamplesFor(selectedWord, selectedSense).map((example) => <blockquote key={example.id}>{highlightTarget(example.text, selectedWord.normalizedHeadword)}<small>{exampleKindLabel(example.kind)} · {example.sourceLabel}</small></blockquote>)}<small>{selectedSense.sourceLabel}</small></div>
                 <GreQuestionEvidence sense={selectedSense} headword={selectedWord.normalizedHeadword} />
-                <div className="relation-form"><label>核心近义词<input value={relationDraft.synonyms} onChange={(event) => setRelationDraft({ ...relationDraft, synonyms: event.target.value })} placeholder="例如：concise, succinct" /></label><label>反义词<input value={relationDraft.antonyms} onChange={(event) => setRelationDraft({ ...relationDraft, antonyms: event.target.value })} placeholder="例如：verbose" /></label><label>易混词<input value={relationDraft.confusables} onChange={(event) => setRelationDraft({ ...relationDraft, confusables: event.target.value })} placeholder="例如：laconic" /></label><label className="full">考题语境或个人笔记<textarea value={relationDraft.contextNote} onChange={(event) => setRelationDraft({ ...relationDraft, contextNote: event.target.value })} placeholder="记录它在题目中出现的句子结构、语气或易错点。" /></label><button className="secondary-button" onClick={saveSenseNotes}>保存词义网络</button></div>
+                <div className="relation-form"><label>核心近义词<input value={relationDraft.synonyms} onChange={(event) => setRelationDraft({ ...relationDraft, synonyms: event.target.value })} placeholder="例如：concise, succinct" /></label><label>反义词<input value={relationDraft.antonyms} onChange={(event) => setRelationDraft({ ...relationDraft, antonyms: event.target.value })} placeholder="例如：verbose" /></label><label>易混词<input value={relationDraft.confusables} onChange={(event) => setRelationDraft({ ...relationDraft, confusables: event.target.value })} placeholder="例如：laconic" /></label><label className="full">我的辨析笔记<textarea value={relationDraft.contextNote} onChange={(event) => setRelationDraft({ ...relationDraft, contextNote: event.target.value })} placeholder="记录它在题目中出现的句子结构、语气或易错点。" /></label><button className="secondary-button" onClick={saveSenseNotes}>保存笔记</button></div>
               </div>}
             </div>}
           </section>
         )}
 
         {tab === "mistakes" && (
-          <section className="page-section"><div className="page-heading"><div><p className="eyebrow">MISTAKE LOOP</p><h1>错题回炉</h1><p>模拟题截图、答案、错因、解析和关联词都只保存在本机；完成校对的题目会按掌握度反复出现。</p></div></div>
+          <section className="page-section"><PageHeading icon={HistoryIcon} kicker="错题复盘" title="把每次失误，变成下一次的把握" description="保存截图，拆解错因，再按遗忘节奏重做；所有内容都留在本机。" />
             <div className="mistake-panel-tabs" role="tablist"><button className={mistakePanel === "mock" ? "active" : ""} onClick={() => setMistakePanel("mock")}>GRE 模拟题错题 <span>{data.mockMistakes.length}</span></button><button className={mistakePanel === "vocabulary" ? "active" : ""} onClick={() => setMistakePanel("vocabulary")}>词汇错因 <span>{data.reviewEvents.filter((event) => event.kind === "mistake" || event.rating === "again" || event.rating === "hard").length}</span></button></div>
             {mistakePanel === "mock" ? <>
               <div className="metric-grid mock-metrics"><article><span>模拟题错题</span><strong>{mockMistakeStats.total}</strong><small>{mockMistakeStats.drafts} 道待补全草稿</small></article><article><span>现在到期</span><strong>{mockMistakeStats.due}</strong><small>按遗忘风险排序重做</small></article><article><span>稳定掌握</span><strong>{mockMistakeStats.mastered}</strong><small>仍会在长间隔后抽查</small></article><article><span>平均掌握度</span><strong>{Math.round(mockMistakeStats.averageMastery * 100)}%</strong><small>基于后续重做结果</small></article></div>
               <div className="mock-mistake-layout">
                 <div className="mock-mistake-form">
-                  <div className="mock-form-heading"><div><p className="eyebrow">PRIVATE INBOX</p><h2>{editingMockMistakeId ? "补全这道错题" : "录入一道模拟题错题"}</h2></div>{editingMockMistakeId && <button onClick={resetMockMistakeForm}>取消编辑</button>}</div>
+                  <div className="mock-form-heading"><div><p className="eyebrow">收录新错题</p><h2>{editingMockMistakeId ? "继续整理这道题" : "从一张截图开始"}</h2></div>{editingMockMistakeId && <button onClick={resetMockMistakeForm}>取消编辑</button>}</div>
                   <label className="mock-shot-picker"><input type="file" accept="image/png,image/jpeg,image/webp,image/gif" onChange={(event) => void handleMockScreenshot(event.target.files?.[0])} /><span>{mockAttachmentBusy ? "正在读取…" : mockAttachment ? "更换截图" : "选择错题截图"}</span><small>PNG / JPG / WebP，最多 8 MB；不会上传</small></label>
                   {mockAttachment?.localDataUrl && <div className="mock-shot-preview"><img src={mockAttachment.localDataUrl} alt="本地错题截图预览" /><button onClick={() => { setMockAttachment(null); setMockAttachmentCleared(true); }}>移除截图</button></div>}
                   <div className="mock-form-grid"><label>题型<select value={mockForm.questionType} onChange={(event) => setMockForm({ ...mockForm, questionType: event.target.value as MockQuestionType })}>{MOCK_QUESTION_TYPES.map((type) => <option key={type} value={type}>{mockQuestionTypeLabels[type]}</option>)}</select></label><label>来源 / 平台<input value={mockForm.sourceLabel} onChange={(event) => setMockForm({ ...mockForm, sourceLabel: event.target.value })} placeholder="例如：PP2 / Manhattan" /></label><label>模考名称<input value={mockForm.mockName} onChange={(event) => setMockForm({ ...mockForm, mockName: event.target.value })} placeholder="例如：PP2 Verbal Section 1" /></label><label>题号<input value={mockForm.questionNumber} onChange={(event) => setMockForm({ ...mockForm, questionNumber: event.target.value })} placeholder="例如：Q8" /></label></div>
@@ -1257,7 +1350,7 @@ function App() {
                   <p className="private-form-note">以后你把截图发给我，我可以帮你识别并校对这些字段；App 本身不会把截图发送给任何 OCR 服务。</p>
                 </div>
                 <div className="mock-mistake-feed">
-                  <div className="mock-feed-heading"><div><p className="eyebrow">REINFORCEMENT QUEUE</p><h2>{dueMockMistakes.length ? `${dueMockMistakes.length} 道现在应重做` : "模拟题错题档案"}</h2></div><div className="mock-feed-actions"><label className="file-button">导入整理结果<input type="file" accept="application/json,.json" onChange={(event) => void importOrganizedMistakes(event.target.files?.[0])} /></label><button className="secondary-button" disabled={!data.mockMistakes.length} onClick={downloadSafeMistakeExport}>安全导出（无截图）</button></div></div>
+                  <div className="mock-feed-heading"><div><p className="eyebrow">复习队列</p><h2>{dueMockMistakes.length ? `今天有 ${dueMockMistakes.length} 道该重做` : "你的错题档案"}</h2></div><div className="mock-feed-actions"><label className="file-button">导入整理结果<input type="file" accept="application/json,.json" onChange={(event) => void importOrganizedMistakes(event.target.files?.[0])} /></label><button className="secondary-button" disabled={!data.mockMistakes.length} onClick={downloadSafeMistakeExport}>安全导出（无截图）</button></div></div>
                   {dueMockMistakes.length > 0 && <><h3 className="mock-feed-section-title">现在到期 · 先独立重做</h3>{dueMockMistakes.map((record) => <MockMistakeCard key={record.id} record={record} isDue reviewDraft={mockReviewDrafts[record.id]} onAnswerChange={(answer) => updateMockReviewAnswer(record.id, answer)} onSubmitAnswer={() => submitMockMistakeAnswer(record)} onRate={(outcome) => reviewMockMistake(record, outcome)} onEdit={() => editMockMistake(record)} />)}</>}
                   {otherMockMistakes.length > 0 && <><h3 className="mock-feed-section-title">其他错题档案</h3>{otherMockMistakes.map((record) => <MockMistakeCard key={record.id} record={record} isDue={false} reviewDraft={undefined} onAnswerChange={() => undefined} onSubmitAnswer={() => undefined} onRate={() => undefined} onEdit={() => editMockMistake(record)} />)}</>}
                   {!data.mockMistakes.length && <div className="feed-empty">还没有模拟题错题。可以先只放一张截图保存为草稿，之后再补题干、答案和解析。</div>}
@@ -1272,12 +1365,12 @@ function App() {
         {tab === "progress" && <ProgressView data={data} dueCount={dueCount} masteryAverage={masteryAverage} />}
 
         {tab === "settings" && (
-          <section className="page-section narrow"><div className="page-heading"><div><p className="eyebrow">CONTROL</p><h1>设置与备份</h1><p>默认数据库已经内置；学习记录单独保存在当前浏览器。</p></div></div>
-            <div className="catalog-card"><div><span>当前数据库</span><strong>{data.catalogVersion}</strong></div><div><span>后台素材词</span><strong>{data.words.length.toLocaleString()}</strong></div><div><span>正式词 / 义项</span><strong>{formalWords.length.toLocaleString()} / {formalSenseCount.toLocaleString()}</strong></div><div><span>真人录音</span><strong>{humanAudioWords.toLocaleString()}</strong></div><div><span>可首次出题</span><strong>{contentReadyWords.toLocaleString()}</strong></div><div><span>抽样策略</span><strong>70% 重点 + 30% 长尾</strong></div></div>
-            <div className="settings-grid"><label>目标考试日期<input type="date" value={data.settings.examDate} onChange={(event) => updateSetting("examDate", event.target.value)} /></label><label>每日新词义<input type="number" min="1" max="200" value={data.settings.dailyNewWords} onChange={(event) => updateSetting("dailyNewWords", Number(event.target.value))} /></label><label>每日到期复习上限<input type="number" min="10" max="300" value={data.settings.dailyReviewLimit} onChange={(event) => updateSetting("dailyReviewLimit", Number(event.target.value))} /></label><label>真人录音速度<select value={data.settings.audioPlaybackRate} onChange={(event) => updateSetting("audioPlaybackRate", Number(event.target.value))}><option value={0.8}>0.8× 慢速</option><option value={1}>1× 原速</option></select></label><label className="checkbox-setting"><input type="checkbox" checked={data.settings.useResponseTime} onChange={(event) => updateSetting("useResponseTime", event.target.checked)} /><span>使用反应时间辅助判断掌握度<small>关闭后只看正确性与历史记录</small></span></label></div>
-            <div className="backup-card"><div><h2>本地备份</h2><p>导出内容包括词库、词义关系、复习记录、错题和设置。</p></div><div className="button-row"><button className="secondary-button" onClick={() => downloadBackup(data)}>导出 JSON 备份</button><label className="file-button">恢复备份<input type="file" accept="application/json,.json" onChange={(event) => { const file = event.target.files?.[0]; if (file) void restoreBackup(file); }} /></label></div></div>
-            <details className="advanced-data"><summary>高级数据管理</summary><p>默认使用内置数据库。只有开发新词库或迁移个人材料时，才需要手动导入 XLSX/CSV。</p><button className="secondary-button" onClick={() => setTab("import")}>打开手动导入工具</button></details>
-            <div className="danger-zone"><div><h3>清空学习记录</h3><p>保留默认词汇数据库，只删除这个浏览器中的掌握度、错题和复习历史。</p></div><button onClick={() => void clearAllData()}>清空学习记录</button></div>
+          <section className="page-section narrow"><PageHeading icon={SettingsIcon} kicker="学习偏好" title="把学习节奏调成适合你的样子" description="考试日期、每日目标、发音和备份，都可以随时调整。" />
+            <div className="catalog-card"><div><span>词库版本</span><strong>{data.catalogVersion}</strong></div><div><span>词库总词条</span><strong>{data.words.length.toLocaleString()}</strong></div><div><span>可学词 / 词义</span><strong>{formalWords.length.toLocaleString()} / {formalSenseCount.toLocaleString()}</strong></div><div><span>真人发音</span><strong>{humanAudioWords.toLocaleString()}</strong></div><div><span>可练词义</span><strong>{contentReadyWords.toLocaleString()}</strong></div><div><span>新词组合</span><strong>70% 高频 + 30% 拓展</strong></div></div>
+            <div className="settings-grid"><label>目标考试日期<input type="date" value={data.settings.examDate} onChange={(event) => updateSetting("examDate", event.target.value)} /></label><label>每日新词目标<input type="number" min="1" max="200" value={data.settings.dailyNewWords} onChange={(event) => updateSetting("dailyNewWords", Number(event.target.value))} /></label><label>每日复习上限<input type="number" min="10" max="300" value={data.settings.dailyReviewLimit} onChange={(event) => updateSetting("dailyReviewLimit", Number(event.target.value))} /></label><label>发音速度<select value={data.settings.audioPlaybackRate} onChange={(event) => updateSetting("audioPlaybackRate", Number(event.target.value))}><option value={0.8}>0.8× 慢速</option><option value={1}>1× 原速</option></select></label><label className="checkbox-setting"><input type="checkbox" checked={data.settings.useResponseTime} onChange={(event) => updateSetting("useResponseTime", event.target.checked)} /><span>把作答速度计入掌握度<small>关闭后只根据正确率与复习历史判断</small></span></label></div>
+            <div className="backup-card"><div><h2>本机备份</h2><p>导出内容包括词库、词义关系、复习记录、错题和设置。</p></div><div className="button-row"><button className="secondary-button" onClick={() => downloadBackup(data)}>导出备份</button><label className="file-button">从备份恢复<input type="file" accept="application/json,.json" onChange={(event) => { const file = event.target.files?.[0]; if (file) void restoreBackup(file); }} /></label></div></div>
+            <details className="advanced-data"><summary>词库与数据工具</summary><p>默认使用内置数据库。只有开发新词库或迁移个人材料时，才需要手动导入 XLSX/CSV。</p><button className="secondary-button" onClick={() => setTab("import")}>打开手动导入工具</button></details>
+            <div className="danger-zone"><div><h3>清除个人学习数据</h3><p>保留默认词汇数据库，只删除这个浏览器中的掌握度、错题和复习历史。</p></div><button onClick={() => void clearAllData()}>清除学习数据</button></div>
           </section>
         )}
       </main>
@@ -1292,7 +1385,7 @@ function ProgressView({ data, dueCount, masteryAverage }: { data: AppData; dueCo
   const ratings = (["again", "hard", "good", "easy"] as Rating[]).map((rating) => ({ rating, count: recent.filter((event) => event.rating === rating).length }));
   const max = Math.max(1, ...ratings.map((item) => item.count));
   const mature = learned.filter((state) => state.definitionMastery >= 70).length;
-  return <section className="page-section"><div className="page-heading"><div><p className="eyebrow">PROGRESS</p><h1>学习进度</h1><p>这里展示的是词义级掌握度，不把“见过单词”当作真正掌握。</p></div></div><div className="metric-grid progress"><article><span>已学习词义</span><strong>{learned.length.toLocaleString()}</strong><small>总计 {Object.keys(data.learning).length.toLocaleString()}</small></article><article><span>稳定掌握</span><strong>{mature.toLocaleString()}</strong><small>掌握度 ≥ 70%</small></article><article><span>当前到期</span><strong>{dueCount}</strong><small>建议今天完成</small></article><article><span>平均掌握度</span><strong>{masteryAverage}%</strong><small>定义回忆维度</small></article></div><div className="progress-panels"><div className="chart-card"><h2>最近 7 天作答质量</h2>{ratings.map((item) => <div className="bar-row" key={item.rating}><span>{ratingLabels[item.rating].label}</span><div><i className={item.rating} style={{ width: `${Math.max(4, (item.count / max) * 100)}%` }} /></div><b>{item.count}</b></div>)}</div><div className="insight-card"><p className="eyebrow">NEXT ACTION</p><h2>{dueCount ? `先完成 ${dueCount} 个到期词义` : "开始今日新词"}</h2><p>{recent.length ? `过去 7 天完成 ${recent.length} 次作答。系统会优先重排遗忘和低信心项目。` : "完成第一轮学习后，这里会显示你的记忆强弱和错误分布。"}</p></div></div></section>;
+  return <section className="page-section"><PageHeading icon={ProgressIcon} kicker="学习轨迹" title="看见积累，也看见下一步" description="每一次回忆都按词义记录；见过，不等于真正掌握。" /><div className="metric-grid progress"><article><span className="metric-label"><BookOpenIcon size={16} />已开始</span><strong>{learned.length.toLocaleString()}</strong><small>总计 {Object.keys(data.learning).length.toLocaleString()}</small></article><article><span className="metric-label"><CheckIcon size={16} />已掌握</span><strong>{mature.toLocaleString()}</strong><small>掌握度 ≥ 70%</small></article><article><span className="metric-label"><ClockIcon size={16} />待复习</span><strong>{dueCount}</strong><small>建议今天完成</small></article><article><span className="metric-label"><BrainIcon size={16} />平均掌握度</span><strong>{masteryAverage}%</strong><small>定义回忆维度</small></article></div><div className="progress-panels"><div className="chart-card"><h2>近 7 天的回忆表现</h2>{ratings.map((item) => <div className="bar-row" key={item.rating}><span>{ratingLabels[item.rating].label}</span><div><i className={item.rating} style={{ width: `${Math.max(4, (item.count / max) * 100)}%` }} /></div><b>{item.count}</b></div>)}</div><div className="insight-card"><p className="eyebrow">下一步</p><h2>{dueCount ? `先复习 ${dueCount} 个到期词义` : "今天从新词开始"}</h2><p>{recent.length ? `近 7 天完成 ${recent.length} 次回忆；易忘与低信心词会更早出现。` : "开始第一轮后，这里会逐渐长出你的记忆曲线。"}</p></div></div></section>;
 }
 
 export default App;

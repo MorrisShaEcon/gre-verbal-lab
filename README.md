@@ -4,10 +4,13 @@ GRE Verbal Lab is a database-first, local-first GRE vocabulary learning system.
 It combines a versioned word-sense catalog with a personal review history,
 mistake loop, and explainable daily plan.
 
-## v2.2.0 alpha
+## v2.2.0 alpha.2
 
 The current alpha changes both the content model and the learning interaction:
 
+- alpha.2 introduces a unified inline-SVG icon system, state-aware study
+  headings, a compact in-session header, and a calmer coaching-style feedback
+  panel without changing scheduling or persistence behavior;
 - first use starts from a built-in catalog rather than an import screen;
 - new words use a stable daily 70% priority / 30% long-tail mix;
 - every one of the 292 quiz-target senses in the local personal build has three
